@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 
 const OnboardingSteps = () => {
   return (
@@ -6,7 +7,7 @@ const OnboardingSteps = () => {
         <h2 className='text-3xl text-white font-bold  mt-8 text-center mb-12'>Work Experience </h2>
         <div className='flex flex-col grid-cols-9 p-2 mx-auto md:grid font-poppins'>
           {/* first box*/}
- dev
+
           <div className='flex md:contents flex-row-reverse'>
             {/* box one child div */}
             <div className='relative p-4 my-6 text-gray-800 bg-white rounded-xl col-start-1 col-end-5 md:ml-auto mr-0 w-[300px] shadow-xl hover:shadow-lg hover:shadow-black'>

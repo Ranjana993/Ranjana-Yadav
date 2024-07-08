@@ -35,7 +35,7 @@ function JsProjects() {
             ensure interactive user experience
           </p>
           <div className='buttons flex gap-[20px] mb-[25px]'>
-            <Link to='https://github.com/UshaRani-coder/JS_Expense-tracker_UR'>
+            <Link to='#'>
               <button style={{border : 'none'}} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-2 px-4 rounded-md focus:outline-none'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -79,7 +79,7 @@ function JsProjects() {
             </span>
           </p>
           <div className='buttons flex gap-[20px] mb-[25px]'>
-            <Link to='https://github.com/UshaRani-coder/JS_Music-Player_UR'>
+            <Link to='#'>
               <button style={{border : 'none'}} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-2 px-4 rounded-md focus:outline-none'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -123,7 +123,7 @@ function JsProjects() {
             </span>
           </p>
           <div className='buttons flex gap-[20px] mb-[25px]'>
-            <Link to='https://github.com/UshaRani-coder/JS_Typing-Game_UR'>
+            <Link to='#'>
               <button style={{border : 'none'}} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-2 px-4 rounded-md focus:outline-none'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -174,7 +174,7 @@ function JsProjects() {
             feedback to the user.
           </p>
           <div className='buttons flex gap-[20px] mb-[25px]'>
-            <Link to='https://github.com/UshaRani-coder/JS_Form-Validation_UR'>
+            <Link to='#'>
               <button style={{border : 'none'}} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-2 px-4 rounded-md focus:outline-none'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -222,7 +222,7 @@ function JsProjects() {
             .
           </p>
           <div className='buttons flex gap-[20px] mb-[25px]'>
-            <Link to='https://github.com/UshaRani-coder/JS_Calculator_UR'>
+            <Link to='#'>
               <button style={{border : 'none'}} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-2 px-4 rounded-md focus:outline-none'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -267,7 +267,7 @@ function JsProjects() {
             <span className='text-white font-bold'>event handling.</span>
           </p>
           <div className='buttons flex gap-[20px] mb-[25px]'>
-            <Link to='https://github.com/UshaRani-coder/JS_Memory-card-game_UR'>
+            <Link to='@#'>
               <button style={{border : 'none'}} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-2 px-4 rounded-md focus:outline-none'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -312,7 +312,7 @@ function JsProjects() {
             updating the display accordingly.
           </p>
           <div className='buttons flex gap-[20px] mb-[25px]'>
-            <Link to='https://github.com/UshaRani-coder/JS_Stopwatch_UR'>
+            <Link to='#'>
               <button style={{border : 'none'}} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-2 px-4 rounded-md focus:outline-none'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -361,7 +361,7 @@ function JsProjects() {
             </span>
           </p>
           <div className='buttons flex gap-[20px] mb-[25px]'>
-            <Link to='https://github.com/UshaRani-coder/JS_To-do-App_UR'>
+            <Link to='#'>
               <button style={{border : 'none'}} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-2 px-4 rounded-md focus:outline-none'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -417,7 +417,7 @@ function JsProjects() {
             <span className='text-white font-bold'>random color</span>
           </p>
           <div className='buttons flex gap-[20px] mb-[25px]'>
-            <Link to='https://github.com/UshaRani-coder/JS_Color-Guessing-game-UR'>
+            <Link to='#'>
               <button style={{border : 'none'}} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-2 px-4 rounded-md focus:outline-none'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -474,7 +474,7 @@ function JsProjects() {
             <span className='text-white font-bold'>correctly.</span>
           </p>
           <div className='buttons flex gap-[20px] mb-[25px]'>
-            <Link to='https://github.com/UshaRani-coder/JS_Countdown_UR'>
+            <Link to='#'>
               <button style={{border : 'none'}} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-2 px-4 rounded-md focus:outline-none'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -518,7 +518,7 @@ function JsProjects() {
             the corresponding span elements with the word and character counts.
           </p>
           <div className='buttons flex gap-[20px] mb-[25px]'>
-            <Link to='https://github.com/UshaRani-coder/JS_Word-Count_UR'>
+            <Link to='#'>
               <button style={{border : 'none'}} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-2 px-4 rounded-md focus:outline-none'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'

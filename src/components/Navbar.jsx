@@ -62,7 +62,7 @@ function Navbar() {
   }, [handleScroll])
   return (
     <div className='navbar flex justify-between w-full  bg-white-800 backdrop-blur-xl shadow-lg shadow-black/[0.03] p-[10px] fixed top-0 z-50'>
-      <a href='https://usharani.vercel.app/' className='hidden font-bold lg:flex lg:ml-[20px]'><span>Usha<span className='text-[#389db6]'>Rani</span></span></a>
+      <a href='#' className='hidden font-bold lg:flex lg:ml-[20px]'><span>Ranjana<span className='text-[#389db6]'> Yadav</span></span></a>
       <ul className='flex justify-between items-center md:mx-[20px] w-[100%] lg:w-[50%]'>
         <li className={`section ${activeSection === 'home' ? 'active' : ''}`}>
           <Link

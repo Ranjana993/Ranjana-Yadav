@@ -1,6 +1,5 @@
 
 import { useState, useEffect } from 'react'
-import ushaRaniImg from '../assets/ushaRani.jpg'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import '../App.css'
 import { Link } from 'react-router-dom'
@@ -35,19 +34,19 @@ function About() {
       <div className='animate-img'>
         <img
           className='bg-[rgb(240,70,240)]  border-none'
-          src={ushaRaniImg}
-          alt='Usha Rani'
+          src={""}
+          alt='Ranjana Yadav'
           onLoad={handleImageLoad}
           style={{ display: 'none' }}
         />
         {
           imageLoaded && (
-            <Link to='https://usharani.vercel.app/'>
+            <Link to='#'>
               <div
                 id='my-img'
                 className='w-[150px] md:w-[220px] md:h-[220px]  border-[4px] outline-dotted border-[#f0dbbb] rounded-full animate-img'
               >
-                <img className='rounded-full w-[150px] md:w-[220px] md:h-[220px] cursor-pointer' src={"https://avatars.githubusercontent.com/u/67220186?v=4"} alt='Usha Rani' />
+                <img className='rounded-full w-[150px] md:w-[220px] md:h-[220px] cursor-pointer' src={"https://avatars.githubusercontent.com/u/67220186?v=4"} alt='Ranjana Yadav' />
               </div>
             </Link>
 
@@ -75,7 +74,7 @@ function About() {
           <div className='mt-[10px]'>
             <a
               href='https://drive.google.com/file/d/1U4olDE49DqDLP0PappfOCZE-viXDnkn_/view'
-              download='Usha Resume.pdf'
+              download='Ranjana Resume.pdf'
             >
               <div className='text-[14px] border border-[#389db6] bg-[#389db6] rounded-full p-[10px] w-[130px] md:w-[150px] flex items-center justify-between'>
                 <span className='text-[#171923] font-bold'>Download CV</span>
@@ -115,7 +114,7 @@ function About() {
                 </svg>
               </div>
             </Link>
-            <Link to='https://www.linkedin.com/in/usha-rani-207939245/'>
+            <Link to='hhttps://www.linkedin.com/in/kumari-ranjana-yadav-a157311a7/'>
               <div className='border border-[#389db6] rounded-full p-[10px]'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -127,7 +126,7 @@ function About() {
                 </svg>
               </div>
             </Link>
-            <Link to='https://github.com/UshaRani-coder'>
+            <Link to='#'>
               <div className='border border-[#389db6] rounded-full p-[10px]'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'

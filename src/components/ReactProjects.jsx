@@ -142,7 +142,7 @@ function ReactProjects() {
             </Link>
           </p>
           <div className=' flex mt-[20px] justify-center mt-[40px] gap-[20px] mb-[25px]'>
-            <Link to='https://github.com/UshaRani-coder/Chat-Application'>
+            <Link to='#'>
               <button style={{border:'none'}} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-2 px-4 rounded-md focus:outline-none'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
