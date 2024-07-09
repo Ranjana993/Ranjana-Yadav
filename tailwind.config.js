@@ -2,7 +2,15 @@
 export default {
   content: ['./src/**/*.html', './src/**/*.jsx'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'playfair': ['"Playfair Display"', 'serif'],
+      },
+      fontWeight: {
+        'playfair-400': 400,
+        'playfair-700': 700,
+      }
+    },
     screens: {
       sm: '425px',
       md: '768px',

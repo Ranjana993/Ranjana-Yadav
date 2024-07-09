@@ -41,17 +41,14 @@ function About() {
         />
         {
           imageLoaded && (
-            <Link to='#'>
-              <div
+            <Link to='/'>
+              <div 
                 id='my-img'
-                className='w-[150px] md:w-[220px] md:h-[220px]  border-[4px] outline-dotted border-[#f0dbbb] rounded-full animate-img'
+                className='w-[150px] md:w-[220px] md:h-[220px]  border-[4px] outline-dotted border-[#f0dbbb] bg-red-600 rounded-full '
               >
                 <img className='rounded-full w-[150px] md:w-[220px] md:h-[220px] cursor-pointer' src={"https://avatars.githubusercontent.com/u/67220186?v=4"} alt='Ranjana Yadav' />
               </div>
             </Link>
-
-
-
           )
         }
       </div>
@@ -114,7 +111,7 @@ function About() {
                 </svg>
               </div>
             </Link>
-            <Link to='hhttps://www.linkedin.com/in/kumari-ranjana-yadav-a157311a7/'>
+            <Link to='https://www.linkedin.com/in/kumari-ranjana-yadav-a157311a7/'>
               <div className='border border-[#389db6] rounded-full p-[10px]'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
