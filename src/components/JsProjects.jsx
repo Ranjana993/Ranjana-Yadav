@@ -1,22 +1,20 @@
-// import countdownImg from '../assets/countdown.png'
-// import musicPlayerImg from '../assets/music-player.png'
-// import stopWatchImg from '../assets/stopwatch.png'
-// import calculatorImg from '../assets/calculator.png'
-// import formValidationImg from '../assets/form-validation.png'
-// import wordCounterImg from '../assets/word-counter.png'
-// import memoryGameImg from '../assets/memory-card-game.png'
-// import typingGame from '../assets/typing-speed-game.png'
-// import toDoListImg from '../assets/todo.png'
-// import expenseTrackerImg from '../assets/expense-tracker.png'
-// import colorGuessingImg from '../assets/color-guessing-game.png'
 import { Link } from 'react-router-dom'
+import carRacing from "../assets/car-racing.png"
+import cocktail from "../assets/cocktail.png"
+import foodDelivery from "../assets/foodDelivery.png"
+import huddle from "../assets/huddle.png"
+import profileCard from "../assets/profileCard.png"
+import travelApp from "../assets/travelApp.png"
+
+
+
 function JsProjects() {
   return (
     <>
       <div className='flex flex-col  items-center gap-y-[30px] lg:flex-row lg:items-center lg:max-w-[1024px] lg:flex-wrap lg:gap-[40px] lg:mx-[30px] mt-[30px]'>
         <div className='w-[80%] flex flex-col gap-y-[20px] items-center js-project md:w-[50%]  lg:w-[30%] project-image-container'>
           <h1 className='project-name text-[#389db6] font-bold text-xl text-center mb-[10px]'>
-            Expense Tracker
+            Landing Page
           </h1>
           <img
             src={"https://kumari-ranjana-yadav-portfolio.vercel.app/assets/img/full-fledge-landing-page.png"}
@@ -63,10 +61,10 @@ function JsProjects() {
 
         <div className='w-[80%] flex flex-col gap-y-[20px] items-center js-project md:w-[50%]  lg:w-[30%] project-image-container'>
           <h1 className='project-name text-[#389db6] font-bold text-xl text-center mb-[10px]'>
-            Music Player
+            Car Racing App
           </h1>
           <img
-            src={"https://kumari-ranjana-yadav-portfolio.vercel.app/assets/img/full-fledge-landing-page.png"}
+            src={carRacing}
             alt='music-player'
             className='w-[100%]  rounded-lg project-image'
           />
@@ -107,10 +105,10 @@ function JsProjects() {
 
         <div className='w-[80%] flex flex-col gap-y-[20px] items-center js-project md:w-[50%]  lg:w-[30%] project-image-container'>
           <h1 className='project-name text-[#389db6] font-bold text-xl text-center mb-[10px]'>
-            Typing Speed Game
+            PROFILE - CARD
           </h1>
           <img
-            src={"https://kumari-ranjana-yadav-portfolio.vercel.app/assets/img/full-fledge-landing-page.png"}
+            src={profileCard}
             alt='typing-game'
             className='w-[100%]  rounded-lg project-image'
           />
@@ -151,10 +149,10 @@ function JsProjects() {
 
         <div className='w-[80%] flex flex-col gap-y-[20px] items-center js-project md:w-[50%]  lg:w-[30%] project-image-container'>
           <h1 className='project-name text-[#389db6] font-bold text-xl text-center mb-[10px]'>
-            Form Validation
+            Cocktail app
           </h1>
           <img
-            src={"https://kumari-ranjana-yadav-portfolio.vercel.app/assets/img/full-fledge-landing-page.png"}
+            src={cocktail}
             alt='form-validation'
             className='w-[100%]  rounded-lg project-image'
           />
@@ -202,10 +200,10 @@ function JsProjects() {
 
         <div className='w-[80%] flex flex-col gap-y-[20px] items-center js-project md:w-[50%]  lg:w-[30%] project-image-container'>
           <h1 className='project-name text-[#389db6] font-bold text-xl text-center mb-[10px]'>
-            Calculator
+            Travelling website
           </h1>
           <img
-            src={"https://kumari-ranjana-yadav-portfolio.vercel.app/assets/img/full-fledge-landing-page.png"}
+            src={travelApp}
             alt='calculator'
             className='w-[100%]  rounded-lg project-image'
           />
@@ -250,10 +248,10 @@ function JsProjects() {
 
         <div className='w-[80%] flex flex-col gap-y-[20px] items-center js-project md:w-[50%]  lg:w-[30%] project-image-container'>
           <h1 className='project-name text-[#389db6] font-bold text-xl text-center mb-[10px]'>
-            Memory Game
+            Huddle landing page
           </h1>
           <img
-            src={"https://kumari-ranjana-yadav-portfolio.vercel.app/assets/img/full-fledge-landing-page.png"}
+            src={huddle}
             alt='Memory Game'
             className='w-[100%]  rounded-lg project-image'
           />
@@ -295,10 +293,10 @@ function JsProjects() {
 
         <div className='w-[80%] flex flex-col gap-y-[20px] items-center js-project md:w-[50%]  lg:w-[30%] project-image-container'>
           <h1 className='project-name text-[#389db6] font-bold text-xl text-center mb-[10px]'>
-            Stop Watch
+            Food Ordering site
           </h1>
           <img
-            src={"https://kumari-ranjana-yadav-portfolio.vercel.app/assets/img/full-fledge-landing-page.png"}
+            src={foodDelivery}
             alt='stop-watch'
             className='w-[100%]  rounded-lg project-image'
           />
@@ -340,7 +338,7 @@ function JsProjects() {
 
         <div className='w-[80%] flex flex-col gap-y-[20px] items-center js-project md:w-[50%]  lg:w-[30%] project-image-container'>
           <h1 className='project-name text-[#389db6] font-bold text-xl text-center mb-[10px]'>
-            To-Do List
+            Tic Tac toe
           </h1>
           <img
             src={"https://kumari-ranjana-yadav-portfolio.vercel.app/assets/img/full-fledge-landing-page.png"}
@@ -389,7 +387,7 @@ function JsProjects() {
 
         <div className='w-[80%] flex flex-col gap-y-[20px] items-center js-project  md:w-[50%] lg:w-[30%] project-image-container'>
           <h1 className='project-name text-[#389db6] font-bold text-xl text-center mb-[10px]'>
-            Color Guessing Game
+            ChatterBox
           </h1>
           <img
             src={"https://kumari-ranjana-yadav-portfolio.vercel.app/assets/img/full-fledge-landing-page.png"}
@@ -445,7 +443,7 @@ function JsProjects() {
 
         <div className='w-[80%] flex flex-col gap-y-[20px] items-center  js-project md:w-[50%]  lg:w-[30%] project-image-container'>
           <h1 className='project-name text-[#389db6] font-bold text-xl text-center mb-[10px]'>
-            Birthday Countdown
+            Expanse Tracker
           </h1>
           <img
             src={"https://kumari-ranjana-yadav-portfolio.vercel.app/assets/img/full-fledge-landing-page.png"}
@@ -501,7 +499,7 @@ function JsProjects() {
         </div>
         <div className='w-[80%] flex flex-col gap-y-[20px] items-center js-project md:w-[50%]  lg:w-[30%] project-image-container'>
           <h1 className='project-name text-[#389db6] font-bold text-xl text-center mb-[10px]'>
-            Word Counter
+            FlavorFusion App
           </h1>
           <img
             src={"https://kumari-ranjana-yadav-portfolio.vercel.app/assets/img/full-fledge-landing-page.png"}
