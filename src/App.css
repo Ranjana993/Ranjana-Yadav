@@ -145,32 +145,7 @@
   padding: 10px;
 }
 
-#my-img {
-  border-radius: 50%;
-  animation: rotateBorder 2s linear infinite;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  -webkit-animation: rotateBorder 2s linear infinite;
-}
 
-@keyframes rotateBorder {
-  from {
-    transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-  }
-}
 
 #my-img img {
   width: 100%;

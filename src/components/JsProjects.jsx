@@ -453,7 +453,7 @@ function JsProjects() {
           <p className='text-ellipsis h-[180px] max-h-[180px] overflow-auto mt-[20px]'>
             This project{' '}
             <span className='text-white font-bold'>
-              prompts the user to enter their birthdate in the 'year-month-day'
+              prompts the user to enter their birthdate in the &apos; year-month-day&apos;
               format.
             </span>{' '}
             It then calculates the countdown to the{' '}

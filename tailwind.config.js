@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         'playfair': ['"Playfair Display"', 'serif'],
+        'bona-nova-sc': ['"Bona Nova SC"', 'serif'],
       },
       fontWeight: {
         'playfair-400': 400,

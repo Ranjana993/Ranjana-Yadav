@@ -27,14 +27,14 @@ function About() {
 
   return (
     <section
-      className='mt-[30px] p-[10px] lg:px-[40px] flex flex-col lg:flex-row-reverse lg:justify-around lg:gap-[50px] lg:items-center  pt-[60px] items-center text-[rgb(181,187,198)]'
+      className=' px-[10px] lg:px-[40px] flex flex-col lg:h-screen lg:flex-row-reverse lg:justify-around lg:gap-[50px] lg:items-center  items-center text-[rgb(181,187,198)]'
       id='about'
     >
 
-      <div className='animate-img'>
+      <div className='py-22'>
         <img
           className='bg-[rgb(240,70,240)]  border-none'
-          src={""}
+          src={"https://avatars.githubusercontent.com/u/67220186?v=4"}
           alt='Ranjana Yadav'
           onLoad={handleImageLoad}
           style={{ display: 'none' }}
@@ -42,9 +42,9 @@ function About() {
         {
           imageLoaded && (
             <Link to='/'>
-              <div 
-                id='my-img'
-                className='w-[150px] md:w-[220px] md:h-[220px]  border-[4px] outline-dotted border-[#f0dbbb] bg-red-600 rounded-full '
+              <div
+                id=''
+                className='w-[150px] md:w-[220px] lg:-mt-24 mt-24 md:h-[220px]  border-[4px] outline-dotted border-[#f0dbbb] bg-red-600 rounded-full '
               >
                 <img className='rounded-full w-[150px] md:w-[220px] md:h-[220px] cursor-pointer' src={"https://avatars.githubusercontent.com/u/67220186?v=4"} alt='Ranjana Yadav' />
               </div>
@@ -52,29 +52,29 @@ function About() {
           )
         }
       </div>
-      <div className='animate-content flex flex-col items-center pt-[20px] lg:pt-0'>
-        <h1 className=' py-[10px] px-[5px] rounded-2xl flex gap-[5px] text-white'>
+      <div className='animate-content flex flex-col items-center lg:pt-0'>
+        <h1 className=' px-[5px] rounded-2xl flex gap-[5px] text-white'>
           Hello , I&apos;m <span className='name'>Kumari Ranjana Yadav</span>
         </h1>
-        <span className='role text-2xl mt-4 md:text-4xl lg:text-5xl xl:text-6xl'>
+        <span className='role text-2xl font-playfair mt-4 md:text-4xl lg:text-5xl xl:text-6xl'>
           Hello folks,
           <span>{text}</span>
           <Cursor cursorColor='red' />
         </span>
-        <p className='px-[10px] md:px-[50px] lg:px-[40px] xl:w-[900px] sm:m-[0px] md:mt-[10px] md:tracking-wider text-white'>
-          driven by a deep passion for crafting immersive digital experiences. I
+        <p className='px-[10px] text-1xl md:px-[50px] lg:px-[40px] xl:w-[900px] sm:m-[0px] md:mt-[10px] md:tracking-wider font-serif text-gray-300'>
+          Driven by a deep passion for crafting immersive digital experiences. I
           specialize in creating seamless user interfaces that marry elegance
           with functionality. Let&apos;s collaborate to turn your ideas into
           beautifully interactive realities!
         </p>
-        <div className='flex flex-col items-center md:flex-row md:gap-[70px]'>
+        <div className='flex flex-col items-center md:flex-row md:gap-[70px] py-12'>
           <div className='mt-[10px]'>
             <a
               href='https://drive.google.com/file/d/1U4olDE49DqDLP0PappfOCZE-viXDnkn_/view'
               download='Ranjana Resume.pdf'
             >
-              <div className='text-[14px] border border-[#389db6] bg-[#389db6] rounded-full p-[10px] w-[130px] md:w-[150px] flex items-center justify-between'>
-                <span className='text-[#171923] font-bold'>Download CV</span>
+              <div className='text-[14px] border border-[#389db6] bg-[#389db6] rounded-full p-[10px] w-[140px] md:w-[158px] flex items-center justify-between'>
+                <span className='text-[#171923] text-center font-bold'>Download CV</span>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   viewBox='0 0 512 512'

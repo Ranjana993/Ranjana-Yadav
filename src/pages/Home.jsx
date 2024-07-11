@@ -10,6 +10,7 @@ import { ToastContainer } from 'react-toastify'
 
 import 'react-toastify/dist/ReactToastify.css'
 import OnboardingSteps from './WorkingJourney.jsx'
+import Experience from './Experience.jsx'
 function Home(props) {
   const [showPopup, setShowPopup] = useState(false)
 
@@ -22,7 +23,8 @@ function Home(props) {
       <ToastContainer className=' max-w-[400px]' />
       <About />
       {/* <Work /> */}
-      <OnboardingSteps />
+      {/* <OnboardingSteps /> */}
+      <Experience/>
       <Skills />
       <Projects />
       <Testimonial />

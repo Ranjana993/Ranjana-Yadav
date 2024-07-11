@@ -1,4 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.bona-nova-sc-regular {
+  @apply font-bona-nova-sc font-normal not-italic;
+}
+
+.bona-nova-sc-bold {
+  @apply font-bona-nova-sc font-bold not-italic;
+}
+
+.bona-nova-sc-regular-italic {
+  @apply font-bona-nova-sc font-normal italic;
+}
