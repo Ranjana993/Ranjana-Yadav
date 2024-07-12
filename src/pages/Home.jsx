@@ -27,7 +27,7 @@ function Home(props) {
       <Experience/>
       <Skills />
       <Projects />
-      <Testimonial />
+      {/* <Testimonial /> */}
       <Contact setShowPopup={setShowPopup} />
     </section>
   )

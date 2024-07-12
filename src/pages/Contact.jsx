@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 
-import React, { useRef, useState, useEffect } from 'react';
+import  { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import svg from '../assets/contact.png';
+import contactus from '../assets/contact-us.jpeg';
 
 function Contact({ setShowPopup }) {
   const [nameInputValue, setNameInputValue] = useState('');
@@ -78,17 +79,17 @@ function Contact({ setShowPopup }) {
   };
 
   return (
-    <section id='contact' className='mt-[30px]'>
-      <h2 className='contact-heading md:text-[25px] text-white font-bold text-center'>
+    <section id='contact' className='mt-[30px] py-12'>
+      <h2 className='contact-heading  text-white text-2xl lg:text-6xl font-playfair text-center py-12'>
         Get in touch
       </h2>
       <div className='flex flex-col items-center lg:flex-row lg:justify-around lg:items-center lg:mx-[50px] mt-[30px] text-white '>
         <form
           ref={form}
           onSubmit={sendEmail}
-          className='contact w-[80%] flex flex-col lg:w-[35%]'
+          className='contact w-[80%] flex flex-col lg:w-[35%] -mt-12'
         >
-          <label className='text-[#389db6] font-bold text-sm mt-[20px] block mb-[5px]'>
+          <label className='text-[#389db6] font-bold text-md mt-[20px] block mb-[5px]'>
             Name
           </label>
           <input
@@ -96,9 +97,9 @@ function Contact({ setShowPopup }) {
             name='user_name'
             value={nameInputValue}
             onChange={(e) => setNameInputValue(e.target.value)}
-            className={`rounded-md bg-transparent outline-none border-[2px] ${nameInputValue ? 'gradient-border' : 'border-white'}`}
+            className={`rounded-md bg-transparent h-12 outline-none border-[2px] ${nameInputValue ? 'gradient-border' : 'border-white'}`}
           />
-          <label className='text-[#389db6] font-bold text-sm mt-[20px] block mb-[5px]'>
+          <label className='text-[#389db6] font-bold text-md mt-[20px] block mb-[5px]'>
             Email
           </label>
           <input
@@ -106,9 +107,9 @@ function Contact({ setShowPopup }) {
             name='user_email'
             value={emailInputValue}
             onChange={(e) => setEmailInputValue(e.target.value)}
-            className={`rounded-md bg-transparent outline-none border-[2px] ${emailInputValue ? 'gradient-border' : 'border-white'}`}
+            className={`rounded-md h-12 bg-transparent outline-none border-[2px] ${emailInputValue ? 'gradient-border' : 'border-white'}`}
           />
-          <label className='text-[#389db6] font-bold text-sm mt-[20px] block mb-[5px]'>
+          <label className='text-[#389db6] font-bold text-md mt-[20px] block mb-[5px]'>
             Message
           </label>
           <textarea
@@ -116,16 +117,16 @@ function Contact({ setShowPopup }) {
             rows={'3'}
             value={messageInputValue}
             onChange={(e) => setMessageInputValue(e.target.value)}
-            className={`rounded-md bg-transparent outline-none border-[2px] ${messageInputValue ? 'gradient-border' : 'border-white'}`}
+            className={`rounded-md bg-transparent  outline-none border-[2px] ${messageInputValue ? 'gradient-border' : 'border-white'}`}
           />
           <button
-            className='mt-[20px] bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md focus:outline-none'
+            className='mt-[20px] h-12 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md focus:outline-none'
             style={{ border: 'none' }}
           >
             Send Message
           </button>
         </form>
-        <img src={svg} alt='thank-you' className='w-[80%] lg:w-[40%]' />
+        <img src={contactus} alt='thank-you' className='w-[80%] lg:-mt-12 mt-12 lg:w-[40%] h-96 rounded-lg' />
       </div>
     </section>
   );

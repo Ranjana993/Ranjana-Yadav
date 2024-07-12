@@ -6,9 +6,6 @@ import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "../constant/data";
 
 export default function Experience() {
-  // const { ref } = useSectionInView("Experience");
-  // const { theme } = useTheme();
-
   return (
     <section id='work' className="scroll-mt-28 mb-28 sm:mb-40 ">
       <h1 className="text-center font-playfair text-5xl py-12 ">My experience</h1>

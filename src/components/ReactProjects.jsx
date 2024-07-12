@@ -16,14 +16,14 @@ function ReactProjects() {
   };
 
   return (
-    <div className='flex flex-col items-center gap-8 lg:flex-row lg:items-center lg:justify-center'>
+    <div className='animate-skill flex flex-col items-center gap-8 lg:flex-row lg:items-center lg:justify-center '>
       {/* Video Hub Project */}
       <div
-        className='react-project w-[80%] md:w-[50%] lg:w-[40%]'
+        className='react-project w-[80%] md:w-[50%] lg:w-[40%] transition duration-300 ease-in-out transform hover:scale-95'
         onClick={() => toggleDetail('videoHub')}
       >
         {!showDetail.videoHub ? (
-          <div className='p-0 cursor-pointer'>
+          <div className='p-0 cursor-pointer  hover:shadow-xl '>
             <img
               src={"https://kumari-ranjana-yadav-portfolio.vercel.app/assets/img/youtube-project4.png"}
               alt='Video Hub'
@@ -51,7 +51,7 @@ function ReactProjects() {
             </p>
           </div>
         ) : (
-          <div className='p-0 cursor-pointer'>
+          <div className='p-0 cursor-pointer '>
             <h1 className='project-name text-[#389db6] font-bold text-3xl text-center mb-[10px]'>
               Video Hub - Details
             </h1>
@@ -93,7 +93,7 @@ function ReactProjects() {
 
       {/* FootFly Project */}
       <div
-        className='react-project w-[80%] md:w-[50%] lg:w-[40%]'
+        className='react-project transition duration-300 ease-in-out transform hover:scale-95 hover:shadow-xl  w-[80%] md:w-[50%] lg:w-[40%]'
         onClick={() => toggleDetail('footFly')}
       >
         {!showDetail.footFly ? (

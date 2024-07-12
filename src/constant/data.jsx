@@ -17,20 +17,28 @@ export const experiencesData = [
     description:
       "Contributed significantly to a closed-source project, leading frontend development efforts. Utilized my expertise to implement and optimize features, fostering collaboration and innovation within the team.",
     icon: React.createElement(SiNextdotjs),
-    date: "December 2023 - Feb 2024",
+    date: "July 2023 - present",
   },
 
   {
     title: "Full Stack Developer Intern",
-    location: "@Sensation Software Solutions Pvt. Ltd.",
+    location: "Nucleya Technology Pvt. Ltd.",
     description:
       "Engaged in a six-month internship, contributing to various aspects of full-stack development. Worked on diverse projects, enhancing skills in both frontend and backend technologies.",
     icon: React.createElement(FaReact),
     date: "July 2023 - December 2023",
   },
   {
-    title: "Full Stack Developer Intern",
-    location: "@Sensation Software Solutions Pvt. Ltd.",
+    title: "React Developer Intern",
+    location: "XcitEducation Worldwide",
+    description:
+      "Engaged in a six-month internship, contributing to various aspects of full-stack development. Worked on diverse projects, enhancing skills in both frontend and backend technologies.",
+    icon: React.createElement(FaReact),
+    date: "July 2023 - December 2023",
+  },
+  {
+    title: "Full-stack Developer Intern", 
+    location: " Solar Secure Solutions",
     description:
       "Engaged in a six-month internship, contributing to various aspects of full-stack development. Worked on diverse projects, enhancing skills in both frontend and backend technologies.",
     icon: React.createElement(FaReact),

@@ -5,15 +5,17 @@ import foodDelivery from "../assets/foodDelivery.png"
 import huddle from "../assets/huddle.png"
 import profileCard from "../assets/profileCard.png"
 import travelApp from "../assets/travelApp.png"
-
+import chatapp from "../assets/chatapp.webp"
+import recipi from "../assets/recipi.png"
+import tictac from "../assets/tictac.png"
 
 
 function JsProjects() {
   return (
     <>
-      <div className='flex flex-col  items-center gap-y-[30px] lg:flex-row lg:items-center lg:max-w-[1024px] lg:flex-wrap lg:gap-[40px] lg:mx-[30px] mt-[30px]'>
-        <div className='w-[80%] flex flex-col gap-y-[20px] items-center js-project md:w-[50%]  lg:w-[30%] project-image-container'>
-          <h1 className='project-name text-[#389db6] font-bold text-xl text-center mb-[10px]'>
+      <div className='flex flex-col  items-center justify-center gap-y-[30px] lg:flex-row lg:items-center lg:w-full lg:flex-wrap lg:gap-[40px] lg:mx-[30px] mt-[30px]'>
+        <div className='w-[80%] transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl  flex flex-col gap-y-[20px] items-center js-project md:w-[50%]  lg:w-[30%] project-image-container'>
+          <h1 className='project-name text-[#389db6] font-bold font-playfair text-2xl text-center mb-[10px]'>
             Landing Page
           </h1>
           <img
@@ -22,18 +24,18 @@ function JsProjects() {
             className='w-[100%]  rounded-lg project-image'
           />
           <p className=' text-ellipsis h-[180px] max-h-[180px] overflow-auto '>
-            Dynamic webpage with Tailwind CSS utilizes{' '}
+            Dynamic webpage with Tailwind CSS utilizes
             <span className='text-white font-bold'>local storage</span> for
             finance tracking.
             <span className='text-white font-bold'>
-              {' '}
-              Event handling, DOM manipulation, and error handling{' '}
-            </span>{' '}
+              
+              Event handling, DOM manipulation, and error handling
+            </span>
             ensure interactive user experience
           </p>
-          <div className='buttons flex gap-[20px] mb-[25px]'>
+          <div className='flex items-end justify-end gap-[20px] mb-[25px]'>
             <Link to='#'>
-              <button style={{border : 'none'}} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-2 px-4 rounded-md focus:outline-none'>
+              <button style={{ border: 'none' }} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-4 px-4 rounded-full focus:outline-none'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   viewBox='0 0 496 512'
@@ -44,8 +46,8 @@ function JsProjects() {
                 </svg>
               </button>
             </Link>
-            <Link to='https://js-expense-tracker-ur.vercel.app/'>
-              <button  style={{border : 'none'}}className='bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md focus:outline-none '>
+            <Link to='#'>
+              <button  style={{border : 'none'}}className='bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-3.5 rounded-full focus:outline-none '>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   viewBox='0 0 640 512'
@@ -59,8 +61,8 @@ function JsProjects() {
           </div>
         </div>
 
-        <div className='w-[80%] flex flex-col gap-y-[20px] items-center js-project md:w-[50%]  lg:w-[30%] project-image-container'>
-          <h1 className='project-name text-[#389db6] font-bold text-xl text-center mb-[10px]'>
+        <div className='w-[80%] transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl  flex flex-col gap-y-[20px] items-center js-project md:w-[50%]  lg:w-[30%] project-image-container'>
+          <h1 className='project-name text-[#389db6] font-bold font-playfair text-2xl text-center mb-[10px]'>
             Car Racing App
           </h1>
           <img
@@ -69,7 +71,7 @@ function JsProjects() {
             className='w-[100%]  rounded-lg project-image'
           />
           <p className=' text-ellipsis h-[180px] max-h-[180px] overflow-auto mt-[20px]'>
-            Dynamic music player with{' '}
+            Dynamic music player with
             <span className='text-white font-bold'>
               play, pause, next, and previous controls. Displays song details,
               slider for seeking, and volume adjustment
@@ -77,7 +79,7 @@ function JsProjects() {
           </p>
           <div className='buttons flex gap-[20px] mb-[25px]'>
             <Link to='#'>
-              <button style={{border : 'none'}} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-2 px-4 rounded-md focus:outline-none'>
+              <button style={{border : 'none'}} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-4 px-4 rounded-full focus:outline-none'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   viewBox='0 0 496 512'
@@ -88,8 +90,8 @@ function JsProjects() {
                 </svg>
               </button>
             </Link>
-            <Link to='https://js-music-player-ur.vercel.app/'>
-              <button  style={{border : 'none'}}className='bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md focus:outline-none '>
+            <Link to='#'>
+              <button style={{ border: 'none' }} className='bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-3.5  rounded-full focus:outline-none '>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   viewBox='0 0 640 512'
@@ -103,8 +105,8 @@ function JsProjects() {
           </div>
         </div>
 
-        <div className='w-[80%] flex flex-col gap-y-[20px] items-center js-project md:w-[50%]  lg:w-[30%] project-image-container'>
-          <h1 className='project-name text-[#389db6] font-bold text-xl text-center mb-[10px]'>
+        <div className='w-[80%] transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl  flex flex-col gap-y-[20px] items-center js-project md:w-[50%]  lg:w-[30%] project-image-container'>
+          <h1 className='project-name text-[#389db6] font-bold font-playfair text-2xl text-center mb-[10px]'>
             PROFILE - CARD
           </h1>
           <img
@@ -113,7 +115,7 @@ function JsProjects() {
             className='w-[100%]  rounded-lg project-image'
           />
           <p className='text-ellipsis h-[180px] max-h-[180px] overflow-auto mt-[20px]'>
-            The project involves a typing speed test application with{' '}
+            The project involves a typing speed test application with
             <span className='text-white font-bold'>
               dynamic paragraph rendering. It tracks words per minute (WPM),
               characters per minute (CPM), and accuracy
@@ -121,7 +123,7 @@ function JsProjects() {
           </p>
           <div className='buttons flex gap-[20px] mb-[25px]'>
             <Link to='#'>
-              <button style={{border : 'none'}} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-2 px-4 rounded-md focus:outline-none'>
+              <button style={{border : 'none'}} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-4 px-4 rounded-full focus:outline-none'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   viewBox='0 0 496 512'
@@ -132,8 +134,8 @@ function JsProjects() {
                 </svg>
               </button>
             </Link>
-            <Link to='https://js-typing-game-ur.vercel.app/'>
-              <button  style={{border : 'none'}}className='bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md focus:outline-none '>
+            <Link to='#'>
+              <button style={{ border: 'none' }} className='bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-3.5  rounded-full focus:outline-none '>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   viewBox='0 0 640 512'
@@ -147,8 +149,8 @@ function JsProjects() {
           </div>
         </div>
 
-        <div className='w-[80%] flex flex-col gap-y-[20px] items-center js-project md:w-[50%]  lg:w-[30%] project-image-container'>
-          <h1 className='project-name text-[#389db6] font-bold text-xl text-center mb-[10px]'>
+        <div className='w-[80%] transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl  flex flex-col gap-y-[20px] items-center js-project md:w-[50%]  lg:w-[30%] project-image-container'>
+          <h1 className='project-name text-[#389db6] font-bold font-playfair text-2xl text-center mb-[10px]'>
             Cocktail app
           </h1>
           <img
@@ -157,22 +159,22 @@ function JsProjects() {
             className='w-[100%]  rounded-lg project-image'
           />
           <p className='text-ellipsis h-[180px] max-h-[180px] overflow-auto mt-[20px]'>
-            It{' '}
+            It
             <span className='text-white font-bold'>
               checks for blank inputs, valid email format, password complexity,
               and password match confirmation
             </span>
-            . Upon{' '}
+            . Upon
             <span className='text-white font-bold'>successful validation</span>,
-            it displays a{' '}
+            it displays a
             <span className='text-white font-bold'>confirmation message</span>
             .The <span className='text-white font-bold'>regex</span> pattern is
-            applied to validate the password's format and provide appropriate
+            applied to validate the password&apos;s format and provide appropriate
             feedback to the user.
           </p>
           <div className='buttons flex gap-[20px] mb-[25px]'>
             <Link to='#'>
-              <button style={{border : 'none'}} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-2 px-4 rounded-md focus:outline-none'>
+              <button style={{border : 'none'}} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-4 px-4 rounded-full focus:outline-none'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   viewBox='0 0 496 512'
@@ -183,8 +185,8 @@ function JsProjects() {
                 </svg>
               </button>
             </Link>
-            <Link to='https://js-form-validation-ur.vercel.app/'>
-              <button  style={{border : 'none'}}className='bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md focus:outline-none '>
+            <Link to='#'>
+              <button style={{ border: 'none' }} className='bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-3.5  rounded-full focus:outline-none '>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   viewBox='0 0 640 512'
@@ -198,8 +200,8 @@ function JsProjects() {
           </div>
         </div>
 
-        <div className='w-[80%] flex flex-col gap-y-[20px] items-center js-project md:w-[50%]  lg:w-[30%] project-image-container'>
-          <h1 className='project-name text-[#389db6] font-bold text-xl text-center mb-[10px]'>
+        <div className='w-[80%] transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl  flex flex-col gap-y-[20px] items-center js-project md:w-[50%]  lg:w-[30%] project-image-container'>
+          <h1 className='project-name text-[#389db6] font-bold font-playfair text-2xl text-center mb-[10px]'>
             Travelling website
           </h1>
           <img
@@ -208,11 +210,11 @@ function JsProjects() {
             className='w-[100%]  rounded-lg project-image'
           />
           <p className='text-ellipsis h-[180px] max-h-[180px] overflow-auto mt-[20px]'>
-            A calculator with{' '}
+            A calculator with
             <span className='text-white font-bold'>
               input, delete, reset, and result
-            </span>{' '}
-            functionality using JavaScript{' '}
+            </span>
+            functionality using JavaScript
             <span className='text-white font-bold'>
               event handling & error handling
             </span>
@@ -220,7 +222,7 @@ function JsProjects() {
           </p>
           <div className='buttons flex gap-[20px] mb-[25px]'>
             <Link to='#'>
-              <button style={{border : 'none'}} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-2 px-4 rounded-md focus:outline-none'>
+              <button style={{border : 'none'}} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-4 px-4 rounded-full focus:outline-none'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   viewBox='0 0 496 512'
@@ -231,8 +233,8 @@ function JsProjects() {
                 </svg>
               </button>
             </Link>
-            <Link to='https://js-calculator-ur.vercel.app/'>
-              <button  style={{border : 'none'}}className='bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md focus:outline-none '>
+            <Link to='#'>
+              <button style={{ border: 'none' }} className='bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-3.5  rounded-full focus:outline-none '>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   viewBox='0 0 640 512'
@@ -246,8 +248,8 @@ function JsProjects() {
           </div>
         </div>
 
-        <div className='w-[80%] flex flex-col gap-y-[20px] items-center js-project md:w-[50%]  lg:w-[30%] project-image-container'>
-          <h1 className='project-name text-[#389db6] font-bold text-xl text-center mb-[10px]'>
+        <div className='w-[80%] transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl  flex flex-col gap-y-[20px] items-center js-project md:w-[50%]  lg:w-[30%] project-image-container'>
+          <h1 className='project-name text-[#389db6] font-bold font-playfair text-2xl text-center mb-[10px]'>
             Huddle landing page
           </h1>
           <img
@@ -256,16 +258,16 @@ function JsProjects() {
             className='w-[100%]  rounded-lg project-image'
           />
           <p className='text-ellipsis h-[180px] max-h-[180px] overflow-auto mt-[20px]'>
-            A memory game with{' '}
+            A memory game with
             <span className='text-white font-bold'>
               flipping cards, matching images, and congratulatory alerts
-            </span>{' '}
-            using JavaScript{' '}
+            </span>
+            using JavaScript
             <span className='text-white font-bold'>event handling.</span>
           </p>
           <div className='buttons flex gap-[20px] mb-[25px]'>
-            <Link to='@#'>
-              <button style={{border : 'none'}} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-2 px-4 rounded-md focus:outline-none'>
+            <Link to='#'>
+              <button style={{border : 'none'}} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-4 px-4 rounded-full focus:outline-none'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   viewBox='0 0 496 512'
@@ -276,8 +278,8 @@ function JsProjects() {
                 </svg>
               </button>
             </Link>
-            <Link to='https://js-memory-card-game-ur.vercel.app/'>
-              <button  style={{border : 'none'}}className='bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md focus:outline-none '>
+            <Link to='#'>
+              <button style={{ border: 'none' }} className='bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-3.5  rounded-full focus:outline-none '>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   viewBox='0 0 640 512'
@@ -291,8 +293,8 @@ function JsProjects() {
           </div>
         </div>
 
-        <div className='w-[80%] flex flex-col gap-y-[20px] items-center js-project md:w-[50%]  lg:w-[30%] project-image-container'>
-          <h1 className='project-name text-[#389db6] font-bold text-xl text-center mb-[10px]'>
+        <div className='w-[80%] transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl  flex flex-col gap-y-[20px] items-center js-project md:w-[50%]  lg:w-[30%] project-image-container'>
+          <h1 className='project-name text-[#389db6] font-bold font-playfair text-2xl text-center mb-[10px]'>
             Food Ordering site
           </h1>
           <img
@@ -302,15 +304,15 @@ function JsProjects() {
           />
           <p className='text-ellipsis h-[180px] max-h-[180px] overflow-auto mt-[20px]'>
             A stopwatch with hours, minutes, seconds, and milliseconds displayed
-            in 00 format. Functions manage{' '}
+            in 00 format. Functions manage
             <span className='text-white font-bold'>
               start, stop, and reset operations,
-            </span>{' '}
+            </span>
             updating the display accordingly.
           </p>
           <div className='buttons flex gap-[20px] mb-[25px]'>
             <Link to='#'>
-              <button style={{border : 'none'}} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-2 px-4 rounded-md focus:outline-none'>
+              <button style={{border : 'none'}} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-4 px-4 rounded-full focus:outline-none'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   viewBox='0 0 496 512'
@@ -321,8 +323,8 @@ function JsProjects() {
                 </svg>
               </button>
             </Link>
-            <Link to='https://js-stopwatch-ur.vercel.app/'>
-              <button  style={{border : 'none'}}className='bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md focus:outline-none '>
+            <Link to='#'>
+              <button style={{ border: 'none' }} className='bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-3.5  rounded-full focus:outline-none '>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   viewBox='0 0 640 512'
@@ -336,30 +338,30 @@ function JsProjects() {
           </div>
         </div>
 
-        <div className='w-[80%] flex flex-col gap-y-[20px] items-center js-project md:w-[50%]  lg:w-[30%] project-image-container'>
-          <h1 className='project-name text-[#389db6] font-bold text-xl text-center mb-[10px]'>
+        <div className='w-[80%] transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl  flex flex-col gap-y-[20px] items-center js-project md:w-[50%]  lg:w-[30%] project-image-container'>
+          <h1 className='project-name text-[#389db6] font-bold font-playfair text-2xl text-center mb-[10px]'>
             Tic Tac toe
           </h1>
           <img
-            src={"https://kumari-ranjana-yadav-portfolio.vercel.app/assets/img/full-fledge-landing-page.png"}
+            src={tictac}
             alt='to-do'
             className='w-[100%]  rounded-lg project-image'
           />
           <p className='text-ellipsis h-[180px] max-h-[180px] overflow-auto mt-[20px]'>
-            This project lets users to{' '}
+            This project lets users to
             <span className='text-white font-bold'>
               add, edit, and delete tasks
             </span>
-            . Tasks are stored in{' '}
-            <span className='text-white font-bold'>local storage,</span>{' '}
-            ensuring{' '}
+            . Tasks are stored in
+            <span className='text-white font-bold'>local storage,</span>
+            ensuring
             <span className='text-white font-bold'>
               persistence across page loads.
             </span>
           </p>
           <div className='buttons flex gap-[20px] mb-[25px]'>
             <Link to='#'>
-              <button style={{border : 'none'}} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-2 px-4 rounded-md focus:outline-none'>
+              <button style={{border : 'none'}} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-4 px-4 rounded-full focus:outline-none'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   viewBox='0 0 496 512'
@@ -370,8 +372,8 @@ function JsProjects() {
                 </svg>
               </button>
             </Link>
-            <Link to='https://js-to-do-app-ur.vercel.app/'>
-              <button  style={{border : 'none'}}className='bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md focus:outline-none '>
+            <Link to='#'>
+              <button style={{ border: 'none' }} className='bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-3.5  rounded-full focus:outline-none '>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   viewBox='0 0 640 512'
@@ -385,37 +387,37 @@ function JsProjects() {
           </div>
         </div>
 
-        <div className='w-[80%] flex flex-col gap-y-[20px] items-center js-project  md:w-[50%] lg:w-[30%] project-image-container'>
-          <h1 className='project-name text-[#389db6] font-bold text-xl text-center mb-[10px]'>
+        <div className='w-[80%] transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl  flex flex-col gap-y-[20px] items-center js-project  md:w-[50%] lg:w-[30%] project-image-container'>
+          <h1 className='project-name text-[#389db6] font-bold font-playfair text-2xl text-center mb-[10px]'>
             ChatterBox
           </h1>
           <img
-            src={"https://kumari-ranjana-yadav-portfolio.vercel.app/assets/img/full-fledge-landing-page.png"}
+            src={chatapp}
             alt='color-guessingr'
             className='w-[100%]  rounded-lg project-image '
           />
           <p className='text-ellipsis h-[180px] max-h-[180px] overflow-auto mt-[20px]'>
-            This project{' '}
+            This project
             <span className='text-white font-bold'>
               generates random RGB color and displays it along with colored
               circles.
-            </span>{' '}
-            Users attempt to{' '}
+            </span>
+            Users attempt to
             <span className='text-white font-bold'>
               match the displayed color by clicking on the circles
             </span>
-            . If correct, a{' '}
+            . If correct, a
             <span className='text-white font-bold'>
               success message appears;
-            </span>{' '}
-            otherwise, they're prompted to{' '}
+            </span>
+            otherwise, they&apos;re prompted to
             <span className='text-white font-bold'>try again.</span> A button
-            allows generating a new{' '}
+            allows generating a new
             <span className='text-white font-bold'>random color</span>
           </p>
           <div className='buttons flex gap-[20px] mb-[25px]'>
             <Link to='#'>
-              <button style={{border : 'none'}} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-2 px-4 rounded-md focus:outline-none'>
+              <button style={{ border: 'none' }} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-4 px-4 rounded-full focus:outline-none'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   viewBox='0 0 496 512'
@@ -426,8 +428,8 @@ function JsProjects() {
                 </svg>
               </button>
             </Link>
-            <Link to='https://js-color-guessing-game-ur.vercel.app/'>
-              <button  style={{border : 'none'}}className='bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md focus:outline-none '>
+            <Link to='#'>
+              <button style={{ border: 'none' }} className='bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-3.5  rounded-full  focus:outline-none '>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   viewBox='0 0 640 512'
@@ -441,38 +443,38 @@ function JsProjects() {
           </div>
         </div>
 
-        <div className='w-[80%] flex flex-col gap-y-[20px] items-center  js-project md:w-[50%]  lg:w-[30%] project-image-container'>
-          <h1 className='project-name text-[#389db6] font-bold text-xl text-center mb-[10px]'>
+        <div className='w-[80%] transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl  flex flex-col gap-y-[20px] items-center  js-project md:w-[50%]  lg:w-[30%] project-image-container'>
+          <h1 className='project-name text-[#389db6] font-bold font-playfair text-2xl text-center mb-[10px]'>
             Expanse Tracker
           </h1>
           <img
-            src={"https://kumari-ranjana-yadav-portfolio.vercel.app/assets/img/full-fledge-landing-page.png"}
+            src={"https://repository-images.githubusercontent.com/359581441/3e3eb800-df44-11eb-8541-30a6954cb3de"}
             alt='countdown'
             className='w-[100%]  rounded-lg project-image'
           />
           <p className='text-ellipsis h-[180px] max-h-[180px] overflow-auto mt-[20px]'>
-            This project{' '}
+            This project
             <span className='text-white font-bold'>
               prompts the user to enter their birthdate in the &apos; year-month-day&apos;
               format.
-            </span>{' '}
-            It then calculates the countdown to the{' '}
+            </span>
+            It then calculates the countdown to the
             <span className='text-white font-bold'>
               next birthday in days, hours, minutes, and seconds, updating the
               corresponding fields.
-            </span>{' '}
-            Users can{' '}
+            </span>
+            Users can
             <span className='text-white font-bold'>
               start and reset the countdown timer.
-            </span>{' '}
-            If the birthdate entered is{' '}
+            </span>
+            If the birthdate entered is
             <span className='text-white font-bold'>invalid,</span> it prompts
-            the user to enter it{' '}
+            the user to enter it
             <span className='text-white font-bold'>correctly.</span>
           </p>
           <div className='buttons flex gap-[20px] mb-[25px]'>
             <Link to='#'>
-              <button style={{border : 'none'}} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-2 px-4 rounded-md focus:outline-none'>
+              <button style={{border : 'none'}} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-4 px-4 rounded-full focus:outline-none'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   viewBox='0 0 496 512'
@@ -483,8 +485,8 @@ function JsProjects() {
                 </svg>
               </button>
             </Link>
-            <Link to='https://js-countdown-ur-rouge.vercel.app/'>
-              <button  style={{border : 'none'}}className='bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md focus:outline-none '>
+            <Link to='#'>
+              <button style={{ border: 'none' }} className='bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-3.5  rounded-full focus:outline-none '>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   viewBox='0 0 640 512'
@@ -497,26 +499,26 @@ function JsProjects() {
             </Link>
           </div>
         </div>
-        <div className='w-[80%] flex flex-col gap-y-[20px] items-center js-project md:w-[50%]  lg:w-[30%] project-image-container'>
-          <h1 className='project-name text-[#389db6] font-bold text-xl text-center mb-[10px]'>
+        <div className='w-[80%] transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl  flex flex-col gap-y-[20px] items-center js-project md:w-[50%] lg:w-[30%] project-image-container'>
+          <h1 className='project-name text-[#389db6] font-bold font-playfair text-2xl text-center mb-[10px]'>
             FlavorFusion App
           </h1>
           <img
-            src={"https://kumari-ranjana-yadav-portfolio.vercel.app/assets/img/full-fledge-landing-page.png"}
-            alt='word-count'
+            src={recipi}
+            alt='recipi'
             className='w-[100%]  rounded-lg project-image '
           />
           <p className='text-ellipsis h-[180px] max-h-[180px] overflow-auto mt-[20px]'>
-            The script counts the{' '}
+            The script counts the
             <span className='text-white font-bold'>
               number of words and characters entered in a textarea.
             </span>
-            Finally, it <span className='text-white font-bold'>updates</span>{' '}
+            Finally, it <span className='text-white font-bold'>updates</span>
             the corresponding span elements with the word and character counts.
           </p>
-          <div className='buttons flex gap-[20px] mb-[25px]'>
+          <div className='buttons flex items-end justify-end gap-[20px] mb-[25px]'>
             <Link to='#'>
-              <button style={{border : 'none'}} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-2 px-4 rounded-md focus:outline-none'>
+              <button style={{border : 'none'}} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-4 px-4 rounded-full focus:outline-none'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   viewBox='0 0 496 512'
@@ -527,8 +529,8 @@ function JsProjects() {
                 </svg>
               </button>
             </Link>
-            <Link to='https://js-word-count-ur.vercel.app/'>
-              <button className='bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md focus:outline-none'>
+            <Link to='#'>
+              <button className='bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-3.5  rounded-full focus:outline-none'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   viewBox='0 0 640 512'
