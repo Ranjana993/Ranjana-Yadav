@@ -1,17 +1,15 @@
 
-
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
-import { HashLink as Link } from 'react-router-hash-link'
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
-import Work from './pages/Work.jsx'
 import Skills from './pages/Skills.jsx'
 import Projects from './pages/Projects.jsx'
 import Testimonials from './pages/Testimonials.jsx'
 import Contact from './pages/Contact.jsx'
 import Navbar from './components/Navbar.jsx'
 import Experience from './pages/Experience.jsx'
+import Footer from './pages/Footer.jsx'
 
 function App() {
   const [toggle, setToggle] = useState(false)
@@ -47,21 +45,20 @@ function App() {
   }
 
   return (
-    <div className='bg-[#171923] text-white overflow-x-hidden'>
+    <div className='bg-[#2C333F] text-white overflow-x-hidden'>
       <Navbar toggle={toggle} setToggle={setToggle} handleClick={handleClick} />
 
       <Routes>
-        <Route
-          path='/'
-          element={<Home toggle={toggle} setToggle={setToggle} handleClick={handleClick} />}
-        />
+        <Route path='/' element={<Home toggle={toggle} setToggle={setToggle} handleClick={handleClick} />} />
         <Route path='/about' element={<About />} />
         <Route path='/work' element={<Experience />} />
-        <Route path='/skills' element={<Skills  />} />
+        <Route path='/skills' element={<Skills />} />
         <Route path='/projects' element={<Projects />} />
         <Route path='/testimonials' element={<Testimonials />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
+
+      <Footer />
     </div>
   )
 }

@@ -14,24 +14,10 @@ function Projects() {
     return null
   }
   return (
-    <section className='mt-[30px] flex flex-col items-center' id='projects'>
-      <h1 className='projects text-white font-semibold md:text-[25px]'>
+    <section className='py-4 flex flex-col items-center' id='projects'>
+      <h1 className='projects text-3xl lg:text-6xl  font-semibold md:text-[25px] font-playfair pb-14 '>
         Projects
       </h1>
-      <p className='leading-[25px] md:leading-[35px] mt-[30px] px-[10px] md:px-[50px] lg:px-[70px]'>
-        I&apos;ve crafted 10+ mini projects in
-        <span className='text-white font-semibold'>HTML, CSS</span>, and
-        <span className='text-white font-semibold'>JavaScript</span>, refining
-        my
-        <span className='text-white font-semibold'>
-          frontend & JavaScript skills
-        </span>
-        . Additionally, I&apos;ve led development on two
-        <span className='text-white font-semibold'>React</span> projects—a
-        <span className='text-white font-semibold'>chat app</span> and a
-        <span className='text-white font-semibold'>resume builder</span>.
-      </p>
-
       <ReactProjects />
       <JsProjects />
     </section>

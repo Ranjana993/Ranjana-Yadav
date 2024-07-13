@@ -24,7 +24,7 @@ export const experiencesData = [
     title: "Full Stack Developer Intern",
     location: "Nucleya Technology Pvt. Ltd.",
     description:
-      "Engaged in a six-month internship, contributing to various aspects of full-stack development. Worked on diverse projects, enhancing skills in both frontend and backend technologies.",
+      "Developed and managed the dashboard Using materialUI and reactjs. Worked on three web applications targeting customers, social media, and admin users; built RESTful APIs with functionalities such as login/ sign up with full authentication.",
     icon: React.createElement(FaReact),
     date: "July 2023 - December 2023",
   },
@@ -32,7 +32,7 @@ export const experiencesData = [
     title: "React Developer Intern",
     location: "XcitEducation Worldwide",
     description:
-      "Engaged in a six-month internship, contributing to various aspects of full-stack development. Worked on diverse projects, enhancing skills in both frontend and backend technologies.",
+      "Customized a tree-based optimization algorithm that separates drugs into distinct groups to maximize the concurrent execution of drug dispenser robots; improved an optimization algorithm that reduced the cycle-time of the automation process by 25%.",
     icon: React.createElement(FaReact),
     date: "July 2023 - December 2023",
   },
@@ -40,7 +40,7 @@ export const experiencesData = [
     title: "Full-stack Developer Intern", 
     location: " Solar Secure Solutions",
     description:
-      "Engaged in a six-month internship, contributing to various aspects of full-stack development. Worked on diverse projects, enhancing skills in both frontend and backend technologies.",
+      "Programmed a cloud-based web app using Flask and JavaScript aimed at storing, visualizing, and tracking temperature and humidity of each drug container to estimate the degradation of the drug. Created an alert system to send notifications and emails when the parameters exceed the threshold.",
     icon: React.createElement(FaReact),
     date: "July 2023 - December 2023",
   },

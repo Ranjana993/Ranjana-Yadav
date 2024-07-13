@@ -19,7 +19,7 @@ const fadeInAnimationVariants = {
 export default function Skills() {
 
   return (
-    <section id="skills" className=" mb-28  scroll-mt-28 text-center sm:mb-40 ">
+    <section id="skills" className="mb-28  scroll-mt-28 text-center sm:mb-40 ">
       <h2 className="text-5xl font-playfair py-12">My skills</h2>
       <ul className="flex flex-wrap justify-center items-center gap-2 text-lg text-gray-800">
         {skillsData.map((skill, index) => (

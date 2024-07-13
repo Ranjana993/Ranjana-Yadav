@@ -334,7 +334,8 @@ background: rgb(131, 58, 180);
 
   #my-img {
     animation: myImageAnimation 1.5s ease forwards;
-  }
+    -webkit-animation: myImageAnimation 1.5s ease forwards;
+}
 
   .animate-content {
     animation: myContentAnimationDesktop 1.5s ease backwards;

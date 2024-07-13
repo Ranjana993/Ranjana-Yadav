@@ -80,7 +80,7 @@ function Contact({ setShowPopup }) {
 
   return (
     <section id='contact' className='mt-[30px] py-12'>
-      <h2 className='contact-heading  text-white text-2xl lg:text-6xl font-playfair text-center py-12'>
+      <h2 className='contact-heading text-2xl lg:text-6xl font-playfair text-center py-12'>
         Get in touch
       </h2>
       <div className='flex flex-col items-center lg:flex-row lg:justify-around lg:items-center lg:mx-[50px] mt-[30px] text-white '>
