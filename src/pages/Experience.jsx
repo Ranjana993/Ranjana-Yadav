@@ -8,9 +8,9 @@ export default function Experience() {
   return (
     <section id='work' className="scroll-mt-28 mb:12 lg:mb-28 sm:mb-40 ">
       <h1 className="text-center font-playfair text-5xl py-12 ">My experience</h1>
-      <VerticalTimeline lineColor="white"
+      <VerticalTimeline lineColor=""
         className="vertical-timeline-element--work"
-        contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+        contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)', color: '#fff' }}
         date="2011 - present"
         iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
       >
@@ -22,7 +22,6 @@ export default function Experience() {
                 boxShadow: "none",
                 border: "1px solid rgba(0, 0, 0, 0.05)",
                 textAlign: "left",
-                color: "white",
                 padding: "1.3rem 2rem",
               }}
               contentArrowStyle={{ borderRight: "0.4rem solid rgba(255, 255, 255, 0.5)" }}
@@ -32,7 +31,7 @@ export default function Experience() {
             >
               <h3 className="font-semibold capitalize">{item.title}</h3>
               <p className="font-normal !mt-0">{item.location}</p>
-              <p className="!mt-1 !font-normal  ">{item.description}</p>
+              <p className="!mt-1 !font-normal text-gray-50 ">{item.description}</p>
             </VerticalTimelineElement>
           </React.Fragment>
         ))}
