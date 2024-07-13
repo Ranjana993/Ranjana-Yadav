@@ -11,7 +11,7 @@ export default function Experience() {
       <h1 className="text-center font-playfair text-5xl py-12 ">My experience</h1>
       <VerticalTimeline lineColor="" 
         className="vertical-timeline-element--work"
-        contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+        // contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
         contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
         date="2011 - present"
         iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
@@ -27,15 +27,10 @@ export default function Experience() {
                 textAlign: "left",
                 padding: "1.3rem 2rem",
               }}
-              contentArrowStyle={{
-                borderRight: "0.4rem solid rgba(255, 255, 255, 0.5)",
-              }}
+              contentArrowStyle={{  borderRight: "0.4rem solid rgba(255, 255, 255, 0.5)" }}
               date={item.date}
               icon={item.icon}
-              iconStyle={{
-                background: "rgba(255, 255, 255, 0.15)",
-                fontSize: "1.5rem",
-              }}
+              iconStyle={{ background: "rgba(255, 255, 255, 0.15)",fontSize: "1.5rem" }}
             >
               <h3 className="font-semibold capitalize">{item.title}</h3>
               <p className="font-normal !mt-0">{item.location}</p>
