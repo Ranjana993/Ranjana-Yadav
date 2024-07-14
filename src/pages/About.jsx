@@ -85,7 +85,7 @@ function About() {
             </Link>
           </div>
           <div className='socials flex gap-[20px] my-[10px] mt-[20px]'>
-            <Link to='tel:8465842779'>
+            <Link to='tel:9354936303'>
               <div
                 className={`border border-[#389db6] text-white rounded-full p-[10px] ${phoneHovered ? 'bg-[#389db6]' : ''}`}
                 onMouseEnter={() => setPhoneHovered(true)}
