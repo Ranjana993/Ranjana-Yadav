@@ -37,18 +37,18 @@ function ReactProjects() {
               Welcome to our cutting-edge Video hub, where the world of video content comes to life with innovation and user-friendly features.
             </p>
             <p className='flex items-center justify-start mt-[7px] gap-[20px] pb-4'>
-              <Link href='https://react.dev/' target='_blank' rel='noopener noreferrer'>
-                <img src={reactIcon} alt='React' width={'30px'} className='cursor-pointer' />
-              </Link>
-              <Link href='https://redux.js.org/' target='_blank' rel='noopener noreferrer' className=' rounded-full '>
-                <img src={reduxIcon} alt='Redux' width={'30px'} className='cursor-pointer' />
-              </Link>
-              <Link href='https://tailwindcss.com/docs/installation' target='_blank' rel='noopener noreferrer'>
-                <img src={tailwindIcon} alt='Tailwind CSS' width={'30px'} className='cursor-pointer' />
-              </Link>
-              <Link href='https://reactrouter.com/en/main' target='_blank' rel='noopener noreferrer'>
-                <img src={reactRouter} alt='React Router' width={'30px'} className='cursor-pointer' />
-              </Link>
+              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
+                reactjs
+              </span>
+              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
+                vite
+              </span>
+              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
+                tailwindcss
+              </span>
+              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
+                voice-recognition
+              </span>
             </p>
           </div>
         ) : (
@@ -105,18 +105,21 @@ function ReactProjects() {
               FootFly is a stylish and user-friendly e-commerce platform dedicated to providing the best footwear collections for men, women, and kids.
             </p>
             <p className='flex items-center justify-start mt-[7px] gap-[20px] pb-4'>
-              <Link href='https://react.dev/' target='_blank' rel='noopener noreferrer'>
-                <img src={reactIcon} alt='React' width={'30px'} className='cursor-pointer' />
-              </Link>
-              <Link href='https://redux.js.org/' target='_blank' rel='noopener noreferrer'>
-                <img src={reduxIcon} alt='Redux' width={'30px'} className='cursor-pointer' />
-              </Link>
-              <Link href='https://tailwindcss.com/docs/installation' target='_blank' rel='noopener noreferrer'>
-                <img src={tailwindIcon} alt='Tailwind CSS' width={'30px'} className='cursor-pointer' />
-              </Link>
-              <Link href='https://reactrouter.com/en/main' target='_blank' rel='noopener noreferrer'>
-                <img src={reactRouter} alt='React Router' width={'30px'} className='cursor-pointer' />
-              </Link>
+              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
+                react.js
+              </span>
+              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
+                mongoDB
+              </span>
+              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
+                tailwindcss
+              </span>
+              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
+                nodejs
+              </span>
+              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
+                expressjs
+              </span>
             </p>
           </div>
         ) : (

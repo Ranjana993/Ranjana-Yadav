@@ -1,135 +1,81 @@
-/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
-import  { useRef, useState, useEffect } from 'react';
-import emailjs from '@emailjs/browser';
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import contactus from '../assets/contact-us.jpeg';
-
-function Contact({ setShowPopup }) {
-  const [nameInputValue, setNameInputValue] = useState('');
-  const [emailInputValue, setEmailInputValue] = useState('');
-  const [messageInputValue, setMessageInputValue] = useState('');
-  const form = useRef();
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setLoading(false);
-  }, []);
-
-  if (loading) {
-    return null;
-  }
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    if (!nameInputValue || !emailInputValue || !messageInputValue) {
-      toast.error('Please fill in all fields', {
-        position: 'top-right',
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: 'dark',
-      });
-      return;
-    }
-
-    emailjs
-      .sendForm('service_wjqdv5i', 'template_zrmsjt8', form.current, {
-        publicKey: 'fMJACP8tUIDVXg5AP',
-      })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-          e.target.reset();
-          setShowPopup(true);
-          toast.success('Message sent', {
-            position: 'top-right',
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: 'dark',
-          });
-          setNameInputValue('');
-          setEmailInputValue('');
-          setMessageInputValue('');
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-          setShowPopup(false);
-          toast.error('Failed to send message', {
-            position: 'top-right',
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: 'dark',
-          });
-        }
-      );
-  };
-
+function ContactSection() {
   return (
-    <section id='contact' className='mt-[30px] py-12'>
-      <h2 className='contact-heading text-2xl lg:text-6xl font-playfair text-center py-12'>
-        Get in touch
-      </h2>
-      <div className='flex flex-col items-center lg:flex-row lg:justify-around lg:items-center lg:mx-[50px] mt-[30px] text-white '>
-        <form
-          ref={form}
-          onSubmit={sendEmail}
-          className='contact w-[80%] flex flex-col lg:w-[35%] -mt-12'
-        >
-          <label className='text-[#389db6] font-bold text-md mt-[20px] block mb-[5px]'>
-            Name
-          </label>
-          <input
-            type='text'
-            name='user_name'
-            value={nameInputValue}
-            onChange={(e) => setNameInputValue(e.target.value)}
-            className={`rounded-md bg-transparent h-12 outline-none border-[2px] ${nameInputValue ? 'gradient-border' : 'border-white'}`}
-          />
-          <label className='text-[#389db6] font-bold text-md mt-[20px] block mb-[5px]'>
-            Email
-          </label>
-          <input
-            type='email'
-            name='user_email'
-            value={emailInputValue}
-            onChange={(e) => setEmailInputValue(e.target.value)}
-            className={`rounded-md h-12 bg-transparent outline-none border-[2px] ${emailInputValue ? 'gradient-border' : 'border-white'}`}
-          />
-          <label className='text-[#389db6] font-bold text-md mt-[20px] block mb-[5px]'>
-            Message
-          </label>
-          <textarea
-            name='message'
-            rows={'3'}
-            value={messageInputValue}
-            onChange={(e) => setMessageInputValue(e.target.value)}
-            className={`rounded-md bg-transparent  outline-none border-[2px] ${messageInputValue ? 'gradient-border' : 'border-white'}`}
-          />
-          <button
-            className='mt-[20px] h-12 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md focus:outline-none'
-            style={{ border: 'none' }}
+    <section id="contact" className=" full-height py-8 pl-4">
+      <h1 className='contact text-center text-3xl lg:text-6xl  font-semibold md:text-[25px] font-playfair pb-14 '>Contact</h1>
+      <div className="mx-auto flex  flex-col gap-4">
+        <div className=" group">
+          <a
+            aria-label="Call Ranjana"
+            href="tel:+919667188563"
+            className="icon-container bg-teal-700 py-3.5 px-4 rounded-full group-hover:bg-teal-800 transition duration-300 hover:rounded-none"
           >
-            Send Message
-          </button>
-        </form>
-        <img src={contactus} alt='thank-you' className='w-[80%] lg:-mt-12 mt-12 lg:w-[40%] h-96 rounded-lg' />
+            <FontAwesomeIcon icon={faPhone} className="text-xl group-hover:rotate" />
+          </a>
+          <a aria-label="Call Ranjana" href="tel:+919667188563" className="ml-4 hover:underline">
+            +91 9667188563
+          </a>
+        </div>
+        <div className=" group">
+          <a
+            aria-label="Email Ranjana"
+            href="mailto:yranjana757@gmail.com"
+            className="icon-container bg-teal-700 py-3.5 px-4 rounded-full group-hover:bg-teal-800 transition duration-300 hover:rounded-none"
+          >
+            <FontAwesomeIcon icon={faEnvelope} className="text-xl" />
+          </a>
+          <a aria-label="Email Ranjana" href="mailto:yranjana757@gmail.com" className="ml-4 hover:underline">
+            yranjana757@gmail.com
+          </a>
+        </div>
+        <div className="group">
+          <a
+            aria-label="View Ranjana on GitHub"
+            href="https://github.com/Ranjana993"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="icon-container bg-teal-700 py-3.5 px-4 rounded-full group-hover:bg-teal-800 transition duration-300 hover:rounded-none"
+          >
+            <FontAwesomeIcon icon={faGithub} className="text-xl" />
+          </a>
+          <a
+            aria-label="Ranjana on Github"
+            href="https://github.com/Ranjana993"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-4 hover:underline"
+          >
+            github.com/Ranjana993
+          </a>
+        </div>
+        <div className="group">
+          <a
+            aria-label="View Ranjana on LinkedIn"
+            href="https://www.linkedin.com/in/kumari-ranjana-yadav-a157311a7/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="icon-container bg-teal-700 py-3.5 px-4 rounded-full group-hover:bg-teal-800 transition duration-300 hover:rounded-none"
+          >
+            <FontAwesomeIcon icon={faLinkedin} className="text-xl" />
+          </a>
+          <a
+            aria-label="Ranjana on LinkedIn"
+            href="https://www.linkedin.com/in/kumari-ranjana-yadav-a157311a7/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-4 hover:underline"
+          >
+            linkedin.com/in/kumari-ranjana-yadav-a157311a7/
+          </a>
+        </div>
       </div>
     </section>
   );
 }
 
-export default Contact;
+export default ContactSection;

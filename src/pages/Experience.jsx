@@ -7,7 +7,7 @@ import { experiencesData } from "../constant/data";
 export default function Experience() {
   return (
     <section id='work' className="scroll-mt-28 mb:12 lg:mb-28 sm:mb-40 ">
-      <h1 className="text-center font-playfair text-5xl py-12 ">My experience</h1>
+      <h1 className='work text-3xl lg:text-6xl  font-semibold md:text-[25px] text-center font-playfair pb-14 '>My experience</h1>
       <VerticalTimeline lineColor=""
         className="vertical-timeline-element--work"
         contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)', color: '#fff' }}

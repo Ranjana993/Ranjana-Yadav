@@ -5,7 +5,6 @@ import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
 import Skills from './pages/Skills.jsx'
 import Projects from './pages/Projects.jsx'
-import Testimonials from './pages/Testimonials.jsx'
 import Contact from './pages/Contact.jsx'
 import Navbar from './components/Navbar.jsx'
 import Experience from './pages/Experience.jsx'
@@ -45,7 +44,7 @@ function App() {
   }
 
   return (
-    <div className='bg-[#2C333F] text-white overflow-x-hidden'>
+    <div className='bg-gray-900 text-white overflow-x-hidden'>
       <Navbar toggle={toggle} setToggle={setToggle} handleClick={handleClick} />
 
       <Routes>
@@ -54,7 +53,6 @@ function App() {
         <Route path='/work' element={<Experience />} />
         <Route path='/skills' element={<Skills />} />
         <Route path='/projects' element={<Projects />} />
-        <Route path='/testimonials' element={<Testimonials />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
 

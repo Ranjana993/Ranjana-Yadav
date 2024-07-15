@@ -133,7 +133,7 @@ function About() {
                 </svg>
               </div>
             </Link>
-            <Link to='#'>
+            <Link to='https://github.com/Ranjana993'>
               <div
                 className={`border border-[#389db6] text-white rounded-full p-[10px] ${githubHovered ? 'bg-[#389db6]' : ''}`}
                 onMouseEnter={() => setGithubHovered(true)}

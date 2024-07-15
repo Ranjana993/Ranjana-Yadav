@@ -20,7 +20,7 @@ export default function Skills() {
 
   return (
     <section id="skills" className="mb-28  scroll-mt-28 text-center sm:mb-40 ">
-      <h2 className="text-5xl font-playfair py-12">My skills</h2>
+      <h1 className='projects text-3xl lg:text-6xl  font-semibold md:text-[25px] font-playfair pb-14 '>My skills</h1>
       <ul className="flex flex-wrap justify-center items-center gap-2 text-lg ">
         {skillsData.map((skill, index) => (
           <motion.li
