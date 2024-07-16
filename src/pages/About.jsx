@@ -57,7 +57,7 @@ function About() {
       </div>
       <div className='animate-content flex flex-col items-center pt-4 lg:pt-0'>
         <h1 className='px-[10px] rounded-2xl flex gap-[5px] text-white'>
-          Hello , I&apos;m <span className='name'>Kumari Ranjana Yadav</span>
+          Hello , I&apos;m <span className='name'>Ranjana Yadav</span>
         </h1>
         <span className='role text-2xl font-playfair mt-4 md:text-4xl lg:text-5xl xl:text-6xl'>
           Hello folks,
