@@ -14,7 +14,7 @@ function JsProjects() {
     <>
       <div className='flex flex-col  items-center justify-center gap-y-[30px] lg:flex-row lg:items-center lg:w-full lg:flex-wrap lg:gap-[40px] lg:mx-[30px] mt-[30px]'>
 
-        <div className='w-[90%] transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl  flex flex-col gap-y-[20px] js-project md:w-[50%]  lg:w-[25%] project-image-container'>
+        <div className='w-[90%] bg-black transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl flex flex-col gap-y-[20px] js-project md:w-[50%]  lg:w-[25%] project-image-container '>
           <img
             src={"https://kumari-ranjana-yadav-portfolio.vercel.app/assets/img/full-fledge-landing-page.png"}
             alt='expense-tracker'

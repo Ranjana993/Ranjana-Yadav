@@ -145,7 +145,8 @@
 .skill,
 .js-project,
 .testimonial {
-  background-image: linear-gradient(to top, #000c1b 0%, #00050f 100%);
+  background: rgba(3, 3, 3, 0.861);
+  /* background-image: linear-gradient(to top, #000c1b 0%, #00050f 100%); */
   border-radius: 10px;
   box-shadow:
     5px 5px 10px #0f0f0f,
