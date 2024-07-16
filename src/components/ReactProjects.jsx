@@ -20,11 +20,11 @@ function ReactProjects() {
     <div className='animate-skill flex flex-col items-center gap-8 lg:flex-row lg:items-center lg:justify-center '>
       {/* Video Hub Project */}
       <div
-        className='react-project w-[80%] md:w-[50%] lg:w-[40%] transition duration-300 ease-in-out transform hover:scale-95'
+        className='react-project w-[90%] md:w-[50%] lg:w-[40%] transition duration-300 ease-in-out transform hover:scale-95'
         onClick={() => toggleDetail('videoHub')}
       >
         {!showDetail.videoHub ? (
-          <div className='p-0 cursor-pointer  hover:shadow-xl '>
+          <div className='p-0 cursor-pointer hover:shadow-xl '>
             <img
               src={"https://kumari-ranjana-yadav-portfolio.vercel.app/assets/img/youtube-project4.png"}
               alt='Video Hub'
@@ -36,7 +36,7 @@ function ReactProjects() {
             <p className='text-ellipsis text-[16px] overflow-hidden mt-[10px] overflow-y-auto py-4'>
               Welcome to our cutting-edge Video hub, where the world of video content comes to life with innovation and user-friendly features.
             </p>
-            <p className='flex items-center justify-start mt-[7px] gap-[20px] pb-4'>
+            <p className='flex items-center flex-wrap justify-start mt-[7px] gap-3 pb-4'>
               <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
                 reactjs
               </span>
@@ -53,22 +53,22 @@ function ReactProjects() {
           </div>
         ) : (
           <div className='p-0 cursor-pointer '>
-            <h1 className='project-name text-[#389db6] font-bold text-3xl text-center mb-[10px] py-5'>
+            <h1 className='project-name text-[#389db6] font-bold text-3xl text-center mb-4 py-2 lg:py-5'>
               Video Hub - Details
             </h1>
             <p className='text-[16px] p-4 '>
               Features:
-              <ul className='list-disc ml-[20px]'>
-                <li className='text-[15px] list-disc'><b>Tools:</b>Reactjs , redux , redux-thunk , react-speech-recognition </li>
-                <li className='text-[15px] list-disc'>This innovative project seamlessly integrates YouTube’s real API, ensuring an authentic user
+              <ul className=''>
+                <li className='text-[15px] '><b>Tools:</b>Reactjs , redux , redux-thunk , react-speech-recognition </li>
+                <li className='text-[15px] '>This innovative project seamlessly integrates YouTube’s real API, ensuring an authentic user
                   experience. Leveraging
                   lazy loading boosts speed by 80%, while the inclusion of React speech recognition allows
                   effortless
                   voice-activated searches.</li>
-                <li className='text-[15px] list-disc'>The meticulously optimized search functionality, coupled with a sleek UI and personalized
+                <li className='text-[15px] '>The meticulously optimized search functionality, coupled with a sleek UI and personalized
                   settings, ensures a smooth
                   and efficient userjourney.</li>
-                <li className='text-[15px] list-disc'>Additionally, the live chat feature enhances interactivity, making the app not only functional but
+                <li className='text-[15px] '>Additionally, the live chat feature enhances interactivity, making the app not only functional but
                   also visually
                   captivating.</li>
               </ul>
@@ -94,7 +94,7 @@ function ReactProjects() {
 
       {/* FootFly Project */}
       <div
-        className='react-project transition duration-300 ease-in-out transform hover:scale-95 hover:shadow-xl  w-[80%] md:w-[50%] lg:w-[40%]'
+        className='react-project transition duration-300 ease-in-out transform hover:scale-95 hover:shadow-xl  w-[90%]  md:w-[50%] lg:w-[40%]'
         onClick={() => toggleDetail('footFly')}
       >
         {!showDetail.footFly ? (
@@ -104,7 +104,7 @@ function ReactProjects() {
             <p className='text-ellipsis text-[16px] overflow-hidden mt-[10px] overflow-y-auto py-4'>
               FootFly is a stylish and user-friendly e-commerce platform dedicated to providing the best footwear collections for men, women, and kids.
             </p>
-            <p className='flex items-center justify-start mt-[7px] gap-[20px] pb-4'>
+            <p className='flex items-center flex-wrap justify-start mt-[7px] gap-3 pb-4'>
               <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
                 react.js
               </span>
@@ -132,7 +132,7 @@ function ReactProjects() {
             </p>
             <p className='text-[16px] mt-[10px]'>
               Features:
-              <ul className='list-disc ml-[20px]'>
+              <ul className=' ml-[20px]'>
                 <li>Product catalog with filtering and sorting options</li>
                 <li>Shopping cart and checkout process</li>
                 <li>User authentication and authorization</li>
@@ -150,15 +150,12 @@ function ReactProjects() {
                 <Link href='https://sole-sphere-frontend.vercel.app/' target='_blank' rel='noopener noreferrer'>
                   <button style={{ border: 'none' }} className='bg-green-500 hover:bg-green-600 text-white font-bold py-3.5 px-3.5 rounded-full focus:outline-none'>
                     <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /></svg>
-
                   </button>
                 </Link>
               </div>
           </div>
         )}
       </div>
-
-      {/* End of projects */}
     </div>
   );
 }

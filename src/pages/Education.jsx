@@ -6,8 +6,8 @@ function Education() {
   return (
     <div id='eduation' >
       <h1 className='eduation text-3xl text-center lg:text-6xl  font-semibold md:text-[25px] font-playfair pb-14 '>Education </h1>
-      <div className="mt-12">
-        <div className="flex gap-8 items-center justify-center">
+      <div className="mt-2 lg:mt-12">
+        <div className="flex flex-col lg:flex-row gap-8 items-center justify-center">
           <div className="bg-gray-800/90 text-gray-100 p-4 rounded-2xl transition-transform duration-300 hover:bg-gray-800 hover:shadow-lg hover:scale-105">
             <div className="card-content">
               <p>
