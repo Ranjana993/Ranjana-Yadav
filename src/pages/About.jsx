@@ -65,24 +65,23 @@ function About() {
           <Cursor cursorColor='red' />
         </span>
         <p className='px-[10px] text-1xl md:px-[50px] lg:px-[40px] xl:w-[900px] sm:m-[0px] md:mt-[10px] md:tracking-wider font-serif text-gray-300'>
-          Driven by a deep passion for crafting immersive digital experiences. I
-          specialize in creating seamless user interfaces that marry elegance
-          with functionality. Let&apos;s collaborate to turn your ideas into
-          beautifully interactive realities!
+          🚀 Full-Stack Engineer with 2+ years of experience in React, Next.js, Node.js, and MongoDB, specializing in responsive UI, API integration, and problem-solving.
+
+          Passionate about building immersive digital experiences, I thrive on crafting seamless, intuitive user interfaces that blend elegance with functionality. Let’s collaborate to bring your ideas to life with beautifully interactive and high-performing web solutions!
         </p>
         <div className='flex flex-col items-center md:flex-row md:gap-[70px] py-12 '>
           <div className='mt-[10px]'>
-            <Link
-              href='https://drive.google.com/file/d/13ISNFKpdYYLNeMlXaf898KdQHoDM4uuq/view?usp=drive_link'
-              download='Ranjana Resume.pdf'
+            <a
+              href='https://drive.google.com/uc?export=download&id=1UtHEzuRVsS8oe1_6b5qTFP_jTjMH8Id9'
+              download='Ranjana_Resume.pdf'
             >
               <div className='text-[14px] border border-[#389db6] bg-[#389db6] rounded-full p-[10px] w-[160px] md:w-[198px] flex items-center justify-center gap-3'>
                 <span className='text-[#171923] text-center font-bold'>Download CV</span>
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' className='cursor-pointer resume w-[16px] animate-heartbeat'  fill='#171923' >
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' className='cursor-pointer resume w-[16px] animate-heartbeat' fill='#171923' >
                   <path d='M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z' />
                 </svg>
               </div>
-            </Link>
+            </a>
           </div>
           <div className='socials flex gap-[20px] my-[10px] mt-[20px]'>
             <Link to='tel:9354936303'>
