@@ -1,4 +1,4 @@
-import { faBook, faChartLine, faSchool, faTasks } from '@fortawesome/free-solid-svg-icons'
+import { faBook, faChartLine, faSchool, faTasks, faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useEffect, useState, useCallback } from 'react'
 import { HashLink as Link } from 'react-router-hash-link'
@@ -63,7 +63,7 @@ function Navbar() {
     }
   }, [handleScroll])
 
-  
+
   return (
     <div className='navbar flex justify-between w-full  bg-white-800 backdrop-blur-xl shadow-lg shadow-black/[0.03] p-[10px] fixed top-0 z-50'>
       <a href='#' className='hidden font-bold lg:flex lg:ml-[20px]'><span>Ranjana<span className='text-[#016958]'> Yadav</span></span></a>
@@ -117,27 +117,21 @@ function Navbar() {
           </Link>
         </li>
         <li className={`section ${activeSection === 'eduation' ? 'active' : 'normal'}`}>
-          <Link
-            to='#eduation'
-            scroll={(el) => el.scrollIntoView({ behavior: 'smooth' })}
-          >
+          <Link to='#eduation' scroll={(el) => el.scrollIntoView({ behavior: 'smooth' })}>
             <FontAwesomeIcon icon={faSchool} className="small" onClick={() => setItemToggle((p) => !p)} />
           </Link>
         </li>
-        <li
-          className={`section ${activeSection === 'projects' ? 'active' : 'normal'}`}
-        >
-          <Link
-            to='#projects'
-            scroll={(el) => el.scrollIntoView({ behavior: 'smooth' })}
-          >
+        <li className={`section ${activeSection === 'projects' ? 'active' : 'normal'}`}>
+          <Link to='#projects' scroll={(el) => el.scrollIntoView({ behavior: 'smooth' })}>
             <FontAwesomeIcon icon={faBook} className="small" onClick={() => setItemToggle((p) => !p)} />
           </Link>
         </li>
-
-        <li
-          className={`section ${activeSection === 'contact' ? 'active' : 'normal'}`}
-        >
+        <li className={`section ${activeSection === 'testimonials' ? 'active' : 'normal'}`}>
+          <Link to='#testimonials' scroll={(el) => el.scrollIntoView({ behavior: 'smooth' })} >
+            <FontAwesomeIcon icon={faQuoteLeft} className="small" onClick={() => setItemToggle((p) => !p)} />
+          </Link>
+        </li>
+        <li className={`section ${activeSection === 'contact' ? 'active' : 'normal'}`}>
           <Link
             to='#contact'
             scroll={(el) => el.scrollIntoView({ behavior: 'smooth' })}

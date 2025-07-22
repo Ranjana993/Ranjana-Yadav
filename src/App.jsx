@@ -9,6 +9,7 @@ import Contact from './pages/Contact.jsx'
 import Navbar from './components/Navbar.jsx'
 import Experience from './pages/Experience.jsx'
 import Footer from './pages/Footer.jsx'
+import Testimonial from './pages/Testimonial.jsx'
 
 function App() {
   const [toggle, setToggle] = useState(false)
@@ -46,7 +47,6 @@ function App() {
   return (
     <div className='bg-gray-900 text-white overflow-x-hidden'>
       <Navbar toggle={toggle} setToggle={setToggle} handleClick={handleClick} />
-
       <Routes>
         <Route path='/' element={<Home toggle={toggle} setToggle={setToggle} handleClick={handleClick} />} />
         <Route path='/about' element={<About />} />
@@ -54,8 +54,8 @@ function App() {
         <Route path='/skills' element={<Skills />} />
         <Route path='/projects' element={<Projects />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/testimonials' element={<Testimonial />} />
       </Routes>
-
       <Footer />
     </div>
   )

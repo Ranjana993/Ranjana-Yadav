@@ -10,6 +10,7 @@ import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Experience from './Experience.jsx'
 import Education from './Education.jsx'
+import Testimonial from './Testimonial.jsx'
 function Home(props) {
   const [showPopup, setShowPopup] = useState(false)
 
@@ -25,6 +26,7 @@ function Home(props) {
       <Skills />
       <Projects />
       <Education />
+      <Testimonial />
       <Contact setShowPopup={setShowPopup} />
     </section>
   )
