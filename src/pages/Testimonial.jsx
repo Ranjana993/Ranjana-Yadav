@@ -1,94 +1,93 @@
 import { motion, useInView } from 'framer-motion'
-import { faQuoteRight } from '@fortawesome/free-solid-svg-icons'
+import { faQuoteRight, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 
 const Testimonial = () => {
+  const [selectedTestimonial, setSelectedTestimonial] = useState(null);
   const testimonials = [
     {
       id: 1,
-      name: "Alex Morgan",
-      role: "CEO, Digital Solutions",
-      content: "Ranjana transformed our web platform with incredible attention to detail. Her React skills are exceptional and she delivered ahead of schedule.",
-      rating: 5,
+      name: "𝐓𝐚𝐫𝐮𝐧 𝐌𝐢𝐬𝐫𝐚 ",
+      role: "Vrindavan Jeev Seva 🛕 Yamuna Cleaning | Community Service | Skill Development & Health Care for Adolescent Girls",
+      content: "We want to extend our deepest appreciation to Ranjana for her exceptional work as our website developer for the Soul of Braj Federation's new website. Her dedication, talent, and hard work have truly brought our vision to life. Ranjana's commitment to this project was evident in every detail, and we're incredibly grateful for her efforts in making our online presence a success.",
       highlight: true
     },
     {
       id: 2,
-      name: "Priya Patel",
-      role: "UX Lead",
-      content: "The most reliable developer I've worked with. She understands complex requirements quickly and implements them flawlessly.",
-      rating: 4,
+      name: "Rahul Kumar Mandal",
+      role: "MERN Stack Developer | Front End Developer at Curious Business Solution | NSEC Graduate",
+      content: "It has been a pleasure working with Kumari Ranjana Yadav. She consistently demonstrated a strong grasp of frontend and backend technologies, including HTML, CSS, TailwindCSS, JavaScript, React.js, Node.js, Express.js and MongoDB. What sets Ranjana apart is her commitment to writing clean, maintainable code and her eagerness to continuously learn.She has shown great initiative in solving complex problems and collaborating with the team effectively.Whether it's building intuitive UIs or optimizing backend logic, she handles tasks with professionalism and a solution- oriented mindset.I highly recommend Ranjana for any opportunity that values skill, dedication, and a collaborative spirit.She will be a valuable asset to any organization she joins.",
       highlight: false
     },
     {
       id: 3,
-      name: "James Wilson",
-      role: "CTO, TechStart",
-      content: "We've hired Ranjana for three projects now. Each time, the code quality has been outstanding and maintenance is a breeze.",
-      rating: 5,
+      name: "Mukesh Kumar",
+      role: "Engineer • Backend Developer • FreelancerEngineer • Backend Developer • Freelancer",
+      content: "I wholeheartedly endorse Ranjana, an exceptional software engineer with a strong proficiency in frontend technologies and data structures and algorithms(DSA) problem - solving.Her expertise spans HTML, CSS, JavaScript, and frameworks such as React, Next, Node.js, and MongoDB, consistently delivering intuitive and visually stunning interfaces. Ranjana's analytical mindset and innovative approach enable her to excel in overcoming complex technical challenges. Her collaborative nature and positive attitude make her a valuable asset to any team, fostering a productive and inclusive work environment.I highly recommend Ranjana for any frontend engineering or full - stack development roles, as her skills and work ethic will undoubtedly make her a valuable contributor to any organization.",
       highlight: false
     },
     {
       id: 4,
-      name: "Lisa Zhang",
-      role: "Product Manager",
-      content: "Her ability to translate designs into functional components is remarkable. Our team's productivity increased by 40% after her optimizations.",
-      rating: 5,
+      name: "Vikash Rahii",
+      role: "Software Developer @Grey Chain || Node.js & NestJS || SQL / NoSQL || API Design || Scalable Systems || AI Nerd",
+      content: "I highly recommend Ranjana, a talented software engineer with exceptional skills in frontend technologies and DSA problem - solving.She excels in HTML, CSS, JavaScript, and frameworks like React, Next, Nodejs, MongoDB consistently delivering user - friendly and visually appealing interfaces.Ranjana's analytical mindset and innovative approach make her a standout in overcoming technical challenges. Her collaborative nature and positive attitude make her a valuable asset to any team",
       highlight: true
     }
   ]
+
   const ref = useRef();
   const isInView = useInView(ref, { once: true });
-  const starRating = (rating) => {
-    return (
-      <div
-        ref={ref}
-        style={{
-          transform: isInView ? "rotateY(0deg)" : "rotateY(90deg)",
-          transition: "transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55)"
-        }}
-        className="w-72 h-96 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl shadow-2xl p-6 text-white perspective-1000"
-      >
-        {[...Array(5)].map((_, i) => (
-          <svg
-            key={i}
-            className={`w-4 h-4 ${i < rating ? 'text-yellow-400' : 'text-gray-300'}`}
-            fill="currentColor"
-            viewBox="0 0 20 20"
-          >
-            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-          </svg>
-        ))}
-      </div>
-    )
-  }
+
+  const openModal = (testimonial) => {
+    setSelectedTestimonial(testimonial);
+  };
+
+  const closeModal = () => {
+    setSelectedTestimonial(null);
+  };
+
+  const truncateContent = (content, wordCount = 15) => {
+    const words = content.split(' ');
+    if (words.length <= wordCount) return content;
+    return words.slice(0, wordCount).join(' ') + '...';
+  };
 
   return (
-    <section id="testimonials" className="py-20 px-5 sm:px-10 ">
+    <section id="testimonials" className="py-20 px-5 sm:px-10 relative">
       <div className="max-w-7xl mx-auto">
-        <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
-          className=" text-3xl lg:text-6xl text-center font-semibold md:text-[25px] font-playfair pb-14"
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-3xl lg:text-6xl text-center font-semibold md:text-[25px] font-playfair pb-14"
         >
           What People Say
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {testimonials.map((testimonial) => (
-            <motion.div key={testimonial.id}  initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: testimonial.id * 0.1 }} whileHover={{ y: -5 }}
-              className={`p-8 rounded-xl ${testimonial.highlight ? 'bg-[#0c564a] text-white' : 'bg-gray-300 shadow-lg'}`}
+            <motion.div
+              key={testimonial.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: testimonial.id * 0.1 }}
+              whileHover={{ y: -5 }}
+              className={`p-8 rounded-xl cursor-pointer ${testimonial.highlight ? 'bg-[#0c564a] text-white' : 'bg-gray-300 shadow-lg'}`}
+              onClick={() => openModal(testimonial)}
             >
-              <FontAwesomeIcon icon={faQuoteRight} className={`text-3xl mb-6 ${testimonial.highlight ? 'text-white opacity-20' : 'text-[#016958] opacity-10'}`}
+              <FontAwesomeIcon
+                icon={faQuoteRight}
+                className={`text-3xl mb-6 ${testimonial.highlight ? 'text-white opacity-20' : 'text-[#016958] opacity-10'}`}
               />
               <p className={`text-lg mb-6 ${testimonial.highlight ? '' : 'text-gray-600'}`}>
-                "{testimonial.content}"
+                "{truncateContent(testimonial.content)}"
               </p>
               <div>
                 <h3 className={`font-bold text-xl ${testimonial.highlight ? 'text-white' : 'text-gray-800'}`}>
                   {testimonial.name}
                 </h3>
-                <p className={`mb-2 ${testimonial.highlight ? 'text-gray-200' : 'text-gray-500'}`}>
+                <p className={`mb-2 text-sm font-semibold ${testimonial.highlight ? 'text-gray-200' : 'text-gray-500'}`}>
                   {testimonial.role}
                 </p>
               </div>
@@ -96,6 +95,41 @@ const Testimonial = () => {
           ))}
         </div>
       </div>
+
+      {/* Modal */}
+      {selectedTestimonial && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            className={`relative max-w-2xl w-full rounded-xl p-8 ${selectedTestimonial.highlight ? 'bg-[#0c564a] text-white' : 'bg-white shadow-xl'}`}
+          >
+            <button
+              onClick={closeModal}
+              className="absolute top-4 right-4 p-2 rounded-full hover:bg-opacity-20 hover:bg-gray-500"
+            >
+              <FontAwesomeIcon icon={faXmark} className="text-xl" />
+            </button>
+
+            <FontAwesomeIcon
+              icon={faQuoteRight}
+              className={`text-3xl mb-6 ${selectedTestimonial.highlight ? 'text-white opacity-20' : 'text-[#016958] opacity-10'}`}
+            />
+            <p className={`text-lg mb-6 ${selectedTestimonial.highlight ? '' : 'text-gray-600'}`}>
+              "{selectedTestimonial.content}"
+            </p>
+            <div>
+              <h3 className={`font-bold text-xl ${selectedTestimonial.highlight ? 'text-white' : 'text-gray-800'}`}>
+                {selectedTestimonial.name}
+              </h3>
+              <p className={`mb-2 ${selectedTestimonial.highlight ? 'text-gray-200' : 'text-gray-500'}`}>
+                {selectedTestimonial.role}
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      )}
     </section>
   )
 }
