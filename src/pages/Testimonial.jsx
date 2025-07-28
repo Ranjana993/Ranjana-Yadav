@@ -56,15 +56,14 @@ const Testimonial = () => {
   return (
     <section id="testimonials" className="py-20 px-5 sm:px-10 relative">
       <div className="max-w-7xl mx-auto">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+        <motion.h1
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-3xl lg:text-6xl text-center font-semibold md:text-[25px] font-playfair pb-14"
+          className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent"
         >
-          What People Say
-        </motion.h2>
-
+          Testimonials
+        </motion.h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {testimonials.map((testimonial) => (
             <motion.div
@@ -73,21 +72,21 @@ const Testimonial = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: testimonial.id * 0.1 }}
               whileHover={{ y: -5 }}
-              className={`p-8 rounded-xl cursor-pointer ${testimonial.highlight ? 'bg-[#0c564a] text-white' : 'bg-gray-300 shadow-lg'}`}
+              className={`p-8 rounded-xl cursor-pointer ${testimonial.highlight ? 'bg-gray-800/60 text-white' : 'bg-gray-800/60 shadow-lg text-white'}`}
               onClick={() => openModal(testimonial)}
             >
               <FontAwesomeIcon
                 icon={faQuoteRight}
                 className={`text-3xl mb-6 ${testimonial.highlight ? 'text-white opacity-20' : 'text-[#016958] opacity-10'}`}
               />
-              <p className={`text-lg mb-6 ${testimonial.highlight ? '' : 'text-gray-600'}`}>
+              <p className={`text-lg mb-6 ${testimonial.highlight ? '' : 'text-white'}`}>
                 "{truncateContent(testimonial.content)}"
               </p>
               <div>
-                <h3 className={`font-bold text-xl ${testimonial.highlight ? 'text-white' : 'text-gray-800'}`}>
+                <h3 className={`font-bold text-xl ${testimonial.highlight ? 'text-white' : 'text-white'}`}>
                   {testimonial.name}
                 </h3>
-                <p className={`mb-2 text-sm font-semibold ${testimonial.highlight ? 'text-gray-200' : 'text-gray-500'}`}>
+                <p className={`mb-2 text-sm font-semibold ${testimonial.highlight ? 'text-gray-200' : 'text-white'}`}>
                   {testimonial.role}
                 </p>
               </div>
