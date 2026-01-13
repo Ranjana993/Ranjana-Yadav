@@ -1,6 +1,16 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { FiBook, FiAward, FiCalendar, FiExternalLink, FiCode, FiDatabase, FiCpu, FiLayers } from "react-icons/fi";
+import {
+  FiBook,
+  FiCalendar,
+  FiExternalLink,
+  FiCpu,
+  FiCode,
+  FiDatabase,
+  FiGitBranch,
+  FiCloud
+} from "react-icons/fi";
+import { SiJavascript, SiReact, SiNodedotjs, SiMongodb } from "react-icons/si";
 
 function Education() {
   const educationData = [
@@ -11,17 +21,21 @@ function Education() {
       location: "Faridabad, Haryana",
       degree: "Diploma in Computer Science and Engineering",
       percentage: "80%",
-      courses: [
-        { name: "Database Management System", icon: <FiDatabase /> },
-        { name: "C Programming", icon: <FiCode /> },
-        { name: "Basics of Computer Network", icon: <FiCpu /> },
-        { name: "Web Development Fundamentals", icon: <FiLayers /> }
-      ],
       duration: "2018 - 2021",
+      techFocus: [
+        { name: "C Programming", icon: <FiCode />, level: "Advanced" },
+        { name: "DBMS", icon: <FiDatabase />, level: "Intermediate" },
+        { name: "Computer Networks", icon: <FiCloud />, level: "Fundamental" },
+        { name: "OS Fundamentals", icon: <FiCpu />, level: "Intermediate" }
+      ],
+      projects: [
+        { name: "Library Management System", tech: "MERN Stack+ MongoDB" },
+        { name: "Student Portal", tech: "HTML/CSS + PHP" }
+      ],
       achievements: [
-        "Ranked in top 10% of class",
-        "Completed 5 major projects",
-        "Active in coding competitions"
+        "Built foundation in core CS concepts",
+        "Implemented 5+ semester projects",
+        "Active participation in coding workshops"
       ]
     },
     {
@@ -31,144 +45,154 @@ function Education() {
       location: "Rohtak, Haryana",
       degree: "Bachelor of Technology in Computer Science",
       percentage: "80%",
-      courses: [
-        { name: "Data Structures and Algorithms", icon: <FiCode /> },
-        { name: "Database Management Systems", icon: <FiDatabase /> },
-        { name: "Operating Systems", icon: <FiCpu /> },
-        { name: "Computer Networks", icon: <FiCpu /> }
-      ],
       duration: "2021 - 2024",
+      techFocus: [
+        { name: "Data Structures & Algorithms", icon: <SiJavascript className="w-4 h-4" />, level: "Advanced" },
+        { name: "Web Development", icon: <SiReact className="w-4 h-4" />, level: "Advanced" },
+        { name: "Backend Systems", icon: <SiNodedotjs className="w-4 h-4" />, level: "Advanced" },
+        { name: "Database Design", icon: <SiMongodb className="w-4 h-4" />, level: "Intermediate" }
+      ],
+      projects: [
+        { name: "Full-Stack E-Commerce Platform", tech: "MERN Stack" },
+        { name: "AI Chatbot Integration", tech: "Node.js + OpenAI API" },
+        { name: "Real-time Dashboard", tech: "React + WebSocket" }
+      ],
       achievements: [
-        "Published research paper",
-        "Lead developer for college app",
-        "Hackathon winner"
+        "Specialized in Full-Stack Development",
+        "Published research on AI integration",
+        "Won college-level hackathon 2023"
       ]
     }
   ];
 
-  const cardVariants = {
-    offscreen: {
-      y: 50,
-      opacity: 0
-    },
-    onscreen: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        bounce: 0.4,
-        duration: 0.8
-      }
+  const getLevelColor = (level) => {
+    switch (level) {
+      case 'Advanced': return 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400';
+      case 'Intermediate': return 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400';
+      default: return 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300';
     }
   };
 
   return (
-    <section id="education" className="py-16 px-4 sm:px-8 ">
-      <div className="max-w-7xl mx-auto">
-        <motion.h1
-          initial={{ opacity: 0, y: -20 }}
+    <section id="education" className="py-20 px-4">
+      <div className="max-w-6xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent"
+          className="text-center mb-12"
         >
-          My Education Journey
-        </motion.h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Academic & Technical Foundation
+          </h1>
+          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Building a strong foundation in computer science principles while specializing in modern web development and AI integration
+          </p>
+        </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 relative">
-          {/* Enhanced Timeline line with gradient dots */}
-          <div className="hidden lg:block absolute left-1/2 h-full w-1 bg-gradient-to-b from-blue-400 to-purple-500 dark:from-blue-600 dark:to-purple-600 transform -translate-x-1/2">
-            {educationData.map((_, index) => (
-              <div
-                key={index}
-                className={`absolute ${index === 0 ? 'top-1/4' : 'top-3/4'} left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 dark:from-blue-600 dark:to-purple-600 border-4 border-white dark:border-gray-800 shadow-md`}
-              ></div>
-            ))}
-          </div>
-
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {educationData.map((edu, index) => (
             <motion.div
-              key={edu.id}
-              initial="offscreen"
-              whileInView="onscreen"
-              viewport={{ once: true, amount: 0.3 }}
-              variants={cardVariants}
-              className={`relative ${index % 2 === 0 ? 'lg:pr-8' : 'lg:pl-8'} ${index % 2 === 0 ? 'lg:text-right' : 'lg:text-left'}`}
-            >
-              {/* Enhanced left-side card design */}
-              <div className={`bg-white dark:bg-gray-800/90 p-6 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 ${index % 2 === 0 ? 'lg:border-r-4 lg:border-r-blue-500' : 'lg:border-l-4 lg:border-l-purple-500'}`}>
-                {/* Institution Header with Icon */}
-                <div className="flex items-start mb-4">
-                  <div className={`p-3 rounded-lg ${index % 2 === 0 ? 'bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400' : 'bg-purple-100 dark:bg-purple-900/50 text-purple-600 dark:text-purple-400'} mr-4`}>
-                    <FiBook className="text-2xl" />
-                  </div>
-                  <div className="flex-1">
-                    <Link
-                      to={edu.link}
-                      target="_blank"
-                      className={`text-2xl font-bold ${index % 2 === 0 ? 'text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300' : 'text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300'} transition-colors flex items-center`}
-                    >
-                      {edu.title} <FiExternalLink className="ml-2 text-sm" />
-                    </Link>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm font-medium mt-1">
-                      <FiCalendar className="inline mr-1" /> {edu.duration}
-                    </p>
-                  </div>
-                </div>
+              key={edu.id}>
+              <div className="h-full bg-white dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-700 p-6 hover:border-blue-300 dark:hover:border-blue-700 transition-all duration-300">
 
-                {/* Degree and Performance */}
+                {/* Header */}
                 <div className="mb-6">
-                  <div className="flex flex-wrap justify-between items-center gap-4 mb-3">
-                    <span className="px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-700 text-sm font-medium">
-                      {edu.degree}
-                    </span>
-                    <div className="flex items-center">
-                      <span className="text-lg font-bold mr-2">{edu.percentage}</span>
-                      <div className="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                        <div
-                          className={`h-2 rounded-full ${index % 2 === 0 ? 'bg-blue-500' : 'bg-purple-500'}`}
-                          style={{ width: `${edu.percentage}%` }}
-                        ></div>
+                  <div className="flex items-start justify-between mb-4">
+                    <div>
+                      <Link
+                        to={edu.link}
+                        target="_blank"
+                        className="text-xl font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center"
+                      >
+                        {edu.title} <FiExternalLink className="ml-2 text-sm" />
+                      </Link>
+                      <div className="flex items-center text-sm text-gray-600 dark:text-gray-400 mt-2">
+                        <FiBook className="mr-2" />
+                        <span>{edu.degree}</span>
                       </div>
                     </div>
+                    <div className="text-right">
+                      <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                        {edu.percentage}
+                      </div>
+                      <div className="text-xs text-gray-500 dark:text-gray-500">CGPA</div>
+                    </div>
                   </div>
-                  <p className="text-gray-500 dark:text-gray-400 text-sm flex justify-end items-end">
-                    <FiAward className="inline text-start mr-1" /> {edu.location}
-                  </p>
+
+                  <div className="flex items-center justify-between text-sm">
+                    <div className="flex items-center text-gray-500 dark:text-gray-500">
+                      <FiCalendar className="mr-2" />
+                      <span>{edu.duration}</span>
+                    </div>
+                    <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-xs">
+                      {edu.location}
+                    </span>
+                  </div>
                 </div>
 
-                {/* Enhanced Coursework Section */}
+                {/* Tech Focus */}
                 <div className="mb-6">
-                  <h4 className="font-semibold text-gray-800 dark:text-gray-100 mb-3 flex items-center">
-                    <span className={`inline-block w-3 h-4 rounded-full mr-2 ${index % 2 === 0 ? 'bg-blue-500' : 'bg-purple-500'}`}></span>
-                    Relevant Coursework
-                  </h4>
-                  <div className="flex justify-center items-center flex-wrap gap-2">
-                    {edu.courses.map((course, i) => (
-                      <div key={i} className="flex items-center p-2 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                        <span className={`p-1.5 rounded-md mr-2 ${index % 2 === 0 ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400' : 'bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400'}`}>
-                          {course.icon}
-                        </span>
-                        <span className="text-sm">{course.name}</span>
+                  <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3 flex items-center">
+                    <FiCpu className="mr-2" />
+                    Technical Focus Areas
+                  </h3>
+                  <div className="grid grid-cols-2 gap-2">
+                    {edu.techFocus.map((tech, i) => (
+                      <div
+                        key={i}
+                        className="flex items-center p-2 bg-gray-50 dark:bg-gray-700/50 rounded-lg"
+                      >
+                        <div className={`p-1.5 rounded-md mr-2 ${index === 0 ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400' :
+                            'bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400'
+                          }`}>
+                          {tech.icon}
+                        </div>
+                        <div className="flex-1">
+                          <div className="text-xs font-medium">{tech.name}</div>
+                          <div className={`text-xs px-1.5 py-0.5 rounded ${getLevelColor(tech.level)} mt-1 inline-block`}>
+                            {tech.level}
+                          </div>
+                        </div>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                {/* Achievements Section (New) */}
+                {/* Projects */}
+                <div className="mb-6">
+                  <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3 flex items-center">
+                    <FiGitBranch className="mr-2" />
+                    Key Projects
+                  </h3>
+                  <div className="space-y-2">
+                    {edu.projects.map((project, i) => (
+                      <div key={i} className="flex justify-between items-center p-2 bg-gray-50 dark:bg-gray-700/50 rounded">
+                        <span className="text-sm text-gray-800 dark:text-gray-200">{project.name}</span>
+                        <span className="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">
+                          {project.tech}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Achievements */}
                 <div>
-                  <h4 className="font-semibold text-gray-800 dark:text-gray-100 mb-3 flex items-center">
-                    <span className={`inline-block w-3 h-3 rounded-full mr-2 ${index % 2 === 0 ? 'bg-blue-500' : 'bg-purple-500'}`}></span>
-                    Key Achievements
-                  </h4>
+                  <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">
+                    Technical Achievements
+                  </h3>
                   <ul className="space-y-2">
                     {edu.achievements.map((achievement, i) => (
-                      <li key={i} className="flex items-start">
-                        <span className={`inline-block w-2 h-2 mt-2 mr-2 rounded-full ${index % 2 === 0 ? 'bg-blue-500' : 'bg-purple-500'}`}></span>
-                        <span className="text-gray-700 dark:text-gray-300 text-sm">{achievement}</span>
+                      <li key={i} className="flex items-start text-sm text-gray-600 dark:text-gray-400">
+                        <span className={`inline-block w-1.5 h-1.5 mt-1.5 mr-2 rounded-full ${index === 0 ? 'bg-blue-500' : 'bg-purple-500'
+                          }`}></span>
+                        {achievement}
                       </li>
                     ))}
                   </ul>
                 </div>
+
               </div>
             </motion.div>
           ))}

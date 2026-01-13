@@ -3,6 +3,7 @@ import { FaReact } from "react-icons/fa";
 import { SiNextdotjs } from "react-icons/si";
 
 export const experiencesData = [
+  
   {
     title: "Freelance Full-Stack Developer",
     location: "Self-Employed",
@@ -13,13 +14,20 @@ export const experiencesData = [
   },
   {
     title: "Full Stack Developer Intern",
-    location: "@Curious Ecosystem",
+    location: "Curious Business Private Limited",
     description:
       "Contributed significantly to a closed-source project, leading frontend development efforts. Utilized my expertise to implement and optimize features, fostering collaboration and innovation within the team.",
     icon: React.createElement(SiNextdotjs),
-    date: "July 2023 - present",
+    date: "July 2023 - August 2025",
   },
-
+  {
+    title: "Full Stack Developer",
+    location: "Nexa Bridge",
+    description:
+      "Developed interactive analytics dashboards with dynamic graphs and pie charts for enhanced data visibility. Refactored legacy React codebase, improving performance by 25%. Built wallet and grocery management systems with Node.js backend, including receipt management using webhook APIs. Collaborated with core management team on product planning and implemented security fixes across the application.",
+    icon: React.createElement(FaReact),
+    date: "April 2025 – September 2025",
+  },
   {
     title: "Full Stack Developer Intern",
     location: "Nucleya Technology Pvt. Ltd.",
@@ -37,38 +45,66 @@ export const experiencesData = [
     date: "July 2023 - Dec 2023",
   },
   {
-    title: "Full-stack Developer Intern", 
-    location: " Solar Secure Solutions",
+    title: "Full-stack Developer Intern",
+    location: "Solar Secure Solutions",
     description:
       "Programmed a cloud-based web app using Flask and JavaScript aimed at storing, visualizing, and tracking temperature and humidity of each drug container to estimate the degradation of the drug. Created an alert system to send notifications and emails when the parameters exceed the threshold.",
     icon: React.createElement(FaReact),
     date: "July 2023 - Dec 2023",
   },
-] 
-
-
-
+];
 
 export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
+  // Frontend
+  "React (v18, v19)",
+  "Next.js",
   "TypeScript",
-  "Nextjs",
-  "C++",
-  "React.js",
+  "JavaScript (ES6+)",
+  "Tailwind CSS",
+  "Material-UI",
+  "Chakra UI",
+  "Redux Toolkit",
+  "Zustand",
+
+  // Backend
   "Node.js",
   "Express.js",
-  "Git & Github",
-  "Tailwind",
-  "Zustand",
-  "Firebase",
-  "MongoDB",
-  "Redux Toolkit",
-  "Express",
-  "Docker",
-  "Figma",
-  "Canva",
-  "Material UI",
+  "RESTful APIs",
+  "GraphQL",
+  "WebSocket/Socket.io",
+  "Authentication",
 
-]
+  // Databases
+  "MongoDB",
+  "Mongoose",
+  "Vector Databases",
+
+  // AI/ML
+  "LLM Integration (OpenAI, Gemini)",
+  "RAG Systems",
+  "AI APIs",
+
+  // Architecture
+  "Microservices",
+  "System Design",
+  "Performance Optimization",
+  "Scalability",
+
+  // Core
+  "C++",
+  "Data Structures & Algorithms",
+  "OOP",
+  "Design Patterns",
+
+  // Tools
+  "Git & GitHub",
+  "Docker",
+  "Firebase",
+  "Figma",
+
+  // Practices
+  "Code Reviews",
+  "Debugging",
+  "Agile/Scrum",
+  "Technical Leadership",
+];

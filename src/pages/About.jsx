@@ -65,14 +65,13 @@ function About() {
           <Cursor cursorColor='red' />
         </span>
         <p className='px-[10px] text-1xl md:px-[50px] lg:px-[40px] xl:w-[900px] sm:m-[0px] md:mt-[10px] md:tracking-wider font-serif text-gray-300'>
-          🚀 Full-Stack Engineer with 2+ years of experience in React, Next.js, Node.js, and MongoDB, specializing in responsive UI, API integration, and problem-solving.
-
-          Passionate about building immersive digital experiences, I thrive on crafting seamless, intuitive user interfaces that blend elegance with functionality. Let’s collaborate to bring your ideas to life with beautifully interactive and high-performing web solutions!
+          🚀  I build intelligent web applications with the MERN stack, specializing in AI integration—LLMs, RAG, and real-time systems. 3+ years of full-stack experience focused on making software not just functional, but perceptive.
         </p>
         <div className='flex flex-col items-center md:flex-row md:gap-[70px] py-12 '>
           <div className='mt-[10px]'>
             <a
-              href='https://drive.google.com/uc?export=download&id=1UtHEzuRVsS8oe1_6b5qTFP_jTjMH8Id9'
+              href='https://drive.google.com/file/d/1dGyrH2sICYufBpdA5LPhuevA88ojfThk/view?usp=sharing'
+              target='_blank'
               download='Ranjana_Resume.pdf'
             >
               <div className='text-[14px] border border-[#389db6] bg-[#389db6] rounded-full p-[10px] w-[160px] md:w-[198px] flex items-center justify-center gap-3'>
@@ -116,7 +115,7 @@ function About() {
                 </svg>
               </div>
             </Link>
-            <Link to='https://www.linkedin.com/in/kumari-ranjana-yadav-a157311a7/'>
+            <Link to='https://www.linkedin.com/in/ranjana-yadav-a157311a7/'>
               <div
                 className={`border border-[#389db6] text-white rounded-full p-[10px] ${linkedinHovered ? 'bg-[#389db6]' : ''}`}
                 onMouseEnter={() => setLinkedinHovered(true)}

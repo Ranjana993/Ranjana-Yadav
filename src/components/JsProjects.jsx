@@ -1,341 +1,186 @@
-import { Link } from 'react-router-dom'
-import carRacing from "../assets/car-racing.png"
-import cocktail from "../assets/cocktail.png"
-import foodDelivery from "../assets/foodDelivery.png"
-import huddle from "../assets/huddle.png"
-import profileCard from "../assets/profileCard.png"
-import travelApp from "../assets/travelApp.png"
-import chatapp from "../assets/chitchat.png"
-import tictac from "../assets/tictac.png"
-
+import { motion } from 'framer-motion';
+import { FiExternalLink, FiGithub, FiGlobe, FiMap, FiShoppingBag } from 'react-icons/fi';
+import { SiCockroachlabs, SiGamejolt } from 'react-icons/si';
 
 function JsProjects() {
+  const projects = [
+    {
+      id: 1,
+      title: "Landing Page",
+      description: "Fully optimized landing page built with pure HTML and CSS, focusing on performance and clean design.",
+      image: "https://kumari-ranjana-yadav-portfolio.vercel.app/assets/img/full-fledge-landing-page.png",
+      technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+      features: ["Clean layout", "Optimized performance", "Mobile-first approach", "Cross-browser compatibility"],
+      githubLink: "https://github.com/Ranjana993/full-fledge-site",
+      liveDemoLink: "https://my-project-ranjana993.vercel.app/",
+      category: "Frontend",
+      icon: <FiGlobe className="text-blue-600 dark:text-blue-400" />
+    },
+    {
+      id: 2,
+      title: "Car Racing Game",
+      description: "Interactive car racing game built with HTML, CSS, and JavaScript for an engaging gaming experience.",
+      image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      technologies: ["HTML5", "CSS3", "JavaScript", "Canvas API", "Game Development"],
+      features: ["Real-time gameplay", "Score tracking", "Responsive controls", "Visual effects"],
+      githubLink: "https://github.com/Ranjana993/Car-Racing",
+      liveDemoLink: "https://car-racing-eight.vercel.app/",
+      category: "Game Development",
+      icon: <SiGamejolt className="text-red-600 dark:text-red-400" />
+    },
+    {
+      id: 3,
+      title: "Cocktail App",
+      description: "Interactive cocktail recipe finder application with search functionality and detailed instructions.",
+      image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      technologies: ["JavaScript", "API Integration", "DOM Manipulation", "CSS Animations"],
+      features: ["Recipe search", "Ingredient filtering", "Step-by-step instructions", "Responsive design"],
+      githubLink: "https://github.com/Ranjana993/cocktail",
+      liveDemoLink: "https://cocktail-app-lime.vercel.app/",
+      category: "Web App",
+      icon: <FiShoppingBag className="text-amber-600 dark:text-amber-400" />
+    },
+    {
+      id: 4,
+      title: "Travel Website",
+      description: "Travel booking website with destination showcase, pricing information, and booking functionality.",
+      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+      features: ["Destination showcase", "Pricing display", "Booking interface", "Gallery view"],
+      githubLink: "https://github.com/Ranjana993/traveling-site",
+      liveDemoLink: "https://traveling-site-three.vercel.app/",
+      category: "Travel",
+      icon: <FiMap className="text-green-600 dark:text-green-400" />
+    },
+    {
+      id: 5,
+      title: "Food Ordering Site",
+      description: "Online food ordering platform with menu browsing, cart functionality, and order placement.",
+      image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      technologies: ["HTML5", "CSS3", "JavaScript", "Local Storage"],
+      features: ["Menu browsing", "Cart management", "Order summary", "Responsive layout"],
+      githubLink: "https://github.com/Ranjana993/food-hunter",
+      liveDemoLink: "https://food-hunter-seven.vercel.app/",
+      category: "E-commerce",
+      icon: <FiShoppingBag className="text-orange-600 dark:text-orange-400" />
+    },
+    {
+      id: 6,
+      title: "Tic Tac Toe",
+      description: "Classic Tic Tac Toe game with interactive gameplay, score tracking, and responsive design.",
+      image: "https://plus.unsplash.com/premium_photo-1673735396428-d51dc2a7a62d?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      technologies: ["JavaScript", "DOM Manipulation", "Game Logic", "CSS Grid"],
+      features: ["Two-player mode", "Score tracking", "Win detection", "Reset functionality"],
+      githubLink: "https://github.com/Ranjana993/tic-tac-toe",
+      liveDemoLink: "https://tic-tac-toe-six-kohl.vercel.app/",
+      category: "Game",
+      icon: <SiGamejolt className="text-purple-600 dark:text-purple-400" />
+    }
+  ];
+
   return (
-    <>
-      <div className='flex flex-col  items-center justify-center gap-y-[30px] lg:flex-row lg:items-center lg:w-full lg:flex-wrap lg:gap-[40px] lg:mx-[30px] mt-[30px]'>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {projects.map((project, index) => (
+        <motion.div
+          key={project.id}
+        >
+          <div className="h-full bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-xl transition-all duration-300 hover:border-purple-300 dark:hover:border-purple-600">
 
-        <div className='w-[90%] bg-black transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl flex flex-col gap-y-[20px] js-project md:w-[50%]  lg:w-[25%] project-image-container '>
-          <img
-            src={"https://kumari-ranjana-yadav-portfolio.vercel.app/assets/img/full-fledge-landing-page.png"}
-            alt='expense-tracker'
-            className='w-[100%]  rounded-lg project-image'
-          />
-          <h1 className='text-[#389db6] font-bold font-playfair text-2xl'> Landing Page</h1>
-          <p className='text-ellipsis overflow-auto text-[16px] '>
-            A Landing page build in Pure html and css with full optimize .
-            <p className='flex items-center justify-start flex-wrap mt-[7px] gap-2  pb-4'>
-              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
-                react.js
-              </span>
-              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
-                mongoDB
-              </span>
-              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
-                tailwindcss
-              </span>
-              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
-                nodejs
-              </span>
-              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
-                expressjs
-              </span>
-            </p>
-          </p>
-          <div className='flex justify-end items-center gap-4 py-1 '>
-            <Link to='https://github.com/Ranjana993/full-fledge-site'>
-              <button style={{ border: 'none' }} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-2 px-2 rounded-full focus:outline-none'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  viewBox='0 0 496 512'
-                  width={'20px'}
-                  fill='#ffffff'
-                >
-                  <path d='M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z' />
-                </svg>
-              </button>
-            </Link>
-            <Link to='https://my-project-ranjana993.vercel.app/'>
-              <button style={{ border: 'none' }} className='bg-green-500 hover:bg-green-600 text-white font-bold py-2.5 px-2  rounded-full focus:outline-none '>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  viewBox='0 0 640 512'
-                  width={'20px'}
-                  fill='#ffffff'
-                >
-                  <path d='M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z' />
-                </svg>
-              </button>
-            </Link>
-          </div>
-        </div>
-
-        {/* car racing  */}
-        <div className='w-[90%] transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl  flex flex-col gap-y-[20px]  js-project md:w-[50%]  lg:w-[25%] project-image-container'>
-          <img src={carRacing} alt='car racing ' className='w-[100%]  rounded-lg project-image' />
-          <h1 className='text-[#389db6] font-bold font-playfair text-2xl text-start'>Car Racing App</h1>
-          <p className='text-ellipsis overflow-auto  text-[16px]'>
-            Enjoy your car racing game is which is built using HTML, CSS, and JavaScript . 
-            <p className='flex items-center flex-wrap justify-start mt-[7px] gap-2 pb-4'>
-              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
-                react.js
-              </span>
-              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
-                mongoDB
-              </span>
-              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
-                tailwindcss
-              </span>
-              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
-                nodejs
-              </span>
-              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
-                expressjs
-              </span>
-            </p>
-          </p>
-          <div className='flex justify-end items-center gap-4 py-1 '>
-            <Link to='https://github.com/Ranjana993/Car-Racing'>
-              <button style={{ border: 'none' }} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-2 px-2 rounded-full focus:outline-none'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  viewBox='0 0 496 512'
-                  width={'20px'}
-                  fill='#ffffff'
-                >
-                  <path d='M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z' />
-                </svg>
-              </button>
-            </Link>
-            <Link to='https://car-racing-eight.vercel.app/'>
-              <button style={{ border: 'none' }} className='bg-green-500 hover:bg-green-600 text-white font-bold py-2.5 px-2  rounded-full focus:outline-none '>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  viewBox='0 0 640 512'
-                  width={'20px'}
-                  fill='#ffffff'
-                >
-                  <path d='M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z' />
-                </svg>
-              </button>
-            </Link>
-          </div>
-        </div>
-
-
-        {/* cocktail  */}
-        <div className='w-[90%] transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl  flex flex-col gap-y-[20px] js-project md:w-[50%]  lg:w-[25%] project-image-container'>
-          <img src={cocktail} alt='form-validation' className='w-[100%]  rounded-lg project-image' />
-          <h1 className='text-[#389db6] font-bold font-playfair text-2xl '>Cocktail app</h1>
-          <p className='text-ellipsis overflow-auto text-[16px]'>
-            A web-app that creates an online cocktail drinks for user .
-            <div className="card-reveal">
-              <p className='flex items-center justify-start flex-wrap mt-[7px] gap-2  pb-4'>
-                <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
-                  react.js
+            {/* Project Image */}
+            <div className="relative overflow-hidden h-48">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+              <div className="absolute top-4 left-4">
+                <div className="bg-white/90 dark:bg-gray-900/90 p-2 rounded-lg">
+                  {project.icon}
+                </div>
+              </div>
+              <div className="absolute top-4 right-4">
+                <span className="bg-purple-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                  {project.category}
                 </span>
-                <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
-                  mongoDB
-                </span>
-                <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
-                  tailwindcss
-                </span>
-                <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
-                  nodejs
-                </span>
-                <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
-                  expressjs
-                </span>
-              </p>
+              </div>
             </div>
-          </p>
-          <div className='flex justify-end items-center gap-4 py-1 '>
-            <Link to='https://github.com/Ranjana993/cocktail'>
-              <button style={{ border: 'none' }} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-2 px-2 rounded-full focus:outline-none'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  viewBox='0 0 496 512'
-                  width={'20px'}
-                  fill='#ffffff'
-                >
-                  <path d='M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z' />
-                </svg>
-              </button>
-            </Link>
-            <Link to='https://cocktail-app-lime.vercel.app/'>
-              <button style={{ border: 'none' }} className='bg-green-500 hover:bg-green-600 text-white font-bold py-2.5 px-2  rounded-full focus:outline-none '>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  viewBox='0 0 640 512'
-                  width={'20px'}
-                  fill='#ffffff'
-                >
-                  <path d='M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z' />
-                </svg>
-              </button>
-            </Link>
+
+            {/* Project Content */}
+            <div className="p-5">
+              {/* Title and Description */}
+              <div className="mb-4">
+                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 line-clamp-1">
+                  {project.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm line-clamp-2">
+                  {project.description}
+                </p>
+              </div>
+
+              {/* Technologies */}
+              <div className="mb-4">
+                <div className="flex flex-wrap gap-1.5">
+                  {project.technologies.map((tech, idx) => (
+                    <span
+                      key={idx}
+                      className="px-2.5 py-1 bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300 rounded text-xs font-medium"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Features */}
+              <div className="mb-4">
+                <h4 className="text-xs font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                  Features
+                </h4>
+                <ul className="space-y-1">
+                  {project.features.slice(0, 2).map((feature, idx) => (
+                    <li key={idx} className="text-xs text-gray-600 dark:text-gray-400 flex items-start">
+                      <span className="w-1 h-1 bg-purple-500 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                      <span className="line-clamp-1">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-700">
+                <div className="flex space-x-2">
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors text-sm"
+                    aria-label="View code on GitHub"
+                  >
+                    <FiGithub className="mr-1.5" size={14} />
+                    Code
+                  </a>
+                  <a
+                    href={project.liveDemoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center px-3 py-1.5 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors text-sm"
+                    aria-label="View live demo"
+                  >
+                    <FiExternalLink className="mr-1.5" size={14} />
+                    Demo
+                  </a>
+                </div>
+                <div className="text-xs text-gray-400 dark:text-gray-500">
+                  #{String(index + 1).padStart(2, '0')}
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-
-        {/* travelling */}
-        <div className='w-[90%] transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl  flex flex-col gap-y-[20px] js-project md:w-[50%]  lg:w-[25%] project-image-container'>
-          <img src={travelApp} alt='calculator' className='w-[100%]  rounded-lg project-image' />
-          <h1 className='text-[#389db6] font-bold font-playfair text-2xl'>Travelling website </h1>
-          <p className='text-ellipsis overflow-auto text-[16px]'>
-            Embark on a journey with Us with a very reasonale pricing .
-            <p className='flex items-center justify-start flex-wrap mt-[7px] gap-2  pb-4'>
-              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
-                react.js
-              </span>
-              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
-                mongoDB
-              </span>
-              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
-                tailwindcss
-              </span>
-              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
-                nodejs
-              </span>
-              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
-                expressjs
-              </span>
-            </p>
-          </p>
-          <div className='flex justify-end items-center gap-4 py-1 '>
-            <Link to='https://github.com/Ranjana993/traveling-site'>
-              <button style={{ border: 'none' }} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-2 px-2 rounded-full focus:outline-none'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  viewBox='0 0 496 512'
-                  width={'20px'}
-                  fill='#ffffff'
-                >
-                  <path d='M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z' />
-                </svg>
-              </button>
-            </Link>
-            <Link to='https://traveling-site-three.vercel.app/'>
-              <button style={{ border: 'none' }} className='bg-green-500 hover:bg-green-600 text-white font-bold py-2.5 px-2  rounded-full focus:outline-none '>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  viewBox='0 0 640 512'
-                  width={'20px'}
-                  fill='#ffffff'
-                >
-                  <path d='M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z' />
-                </svg>
-              </button>
-            </Link>
-          </div>
-        </div>
-
-
-        {/* food ordering */}
-        <div className='w-[90%] transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl  flex flex-col gap-y-[20px] js-project md:w-[50%]  lg:w-[25%] project-image-container'>
-          <img src={foodDelivery} alt='stop-watch' className='w-[100%]  rounded-lg project-image' />
-          <h1 className='text-[#389db6] font-bold font-playfair text-2xl'> Food Ordering site</h1>
-          <p className='text-ellipsis overflow-auto text-[16px]'>
-            Enjoy your meal with us , where you can find different varities of food iteams
-            <p className='flex items-center justify-start flex-wrap mt-[7px] gap-2  pb-4'>
-              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
-                react.js
-              </span>
-              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
-                mongoDB
-              </span>
-              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
-                tailwindcss
-              </span>
-              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
-                nodejs
-              </span>
-              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
-                expressjs
-              </span>
-            </p>
-          </p>
-          <div className='flex justify-end items-center gap-4 py-1 '>
-            <Link to='https://github.com/Ranjana993/food-hunter'>
-              <button style={{ border: 'none' }} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-2 px-2 rounded-full focus:outline-none'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  viewBox='0 0 496 512'
-                  width={'20px'}
-                  fill='#ffffff'
-                >
-                  <path d='M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z' />
-                </svg>
-              </button>
-            </Link>
-            <Link to='https://food-hunter-seven.vercel.app/'>
-              <button style={{ border: 'none' }} className='bg-green-500 hover:bg-green-600 text-white font-bold py-2.5 px-2  rounded-full focus:outline-none '>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  viewBox='0 0 640 512'
-                  width={'20px'}
-                  fill='#ffffff'
-                >
-                  <path d='M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z' />
-                </svg>
-              </button>
-            </Link>
-          </div>
-        </div>
-
-        {/* tic tac toe */}
-        <div className='w-[90%] transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl  flex flex-col gap-y-[20px] js-project md:w-[50%]  lg:w-[25%] project-image-container'>
-          <img src={tictac} alt='to-do' className='w-[100%]  rounded-lg project-image' />
-          <h1 className='text-[#389db6] font-bold font-playfair text-2xl'>  Tic Tac toe </h1>
-          <p className='text-ellipsis overflow-auto text-[16px]'>
-            Developed a Tic Tac Toe game using React.js and TailwindCSS.
-            <p className='flex items-center justify-start flex-wrap mt-[7px] gap-2  pb-4'>
-              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
-                react.js
-              </span>
-              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
-                mongoDB
-              </span>
-              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
-                tailwindcss
-              </span>
-              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
-                nodejs
-              </span>
-              <span className='bg-white font-bold text-sm text-black py-1 rounded-xl px-2'>
-                expressjs
-              </span>
-            </p>
-          </p>
-          <div className='flex justify-end items-center gap-4 py-1 '>
-            <Link to='https://github.com/Ranjana993/tic-tac-toe'>
-              <button style={{ border: 'none' }} className='bg-[#24292e] hover:bg-[#0366d6] text-white font-bold py-2 px-2 rounded-full focus:outline-none'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  viewBox='0 0 496 512'
-                  width={'20px'}
-                  fill='#ffffff'
-                >
-                  <path d='M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z' />
-                </svg>
-              </button>
-            </Link>
-            <Link to='https://tic-tac-toe-six-kohl.vercel.app/'>
-              <button style={{ border: 'none' }} className='bg-green-500 hover:bg-green-600 text-white font-bold py-2.5 px-2  rounded-full focus:outline-none '>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  viewBox='0 0 640 512'
-                  width={'20px'}
-                  fill='#ffffff'
-                >
-                  <path d='M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z' />
-                </svg>
-              </button>
-            </Link>
-          </div>
-        </div>
-
-      </div>
-    </>
-  )
+        </motion.div>
+      ))}
+    </div>
+  );
 }
 
-export default JsProjects
+export default JsProjects;

@@ -1,99 +1,140 @@
 import { motion } from "framer-motion";
+import { FiHeart, FiMail, FiGithub, FiLinkedin, FiCode } from "react-icons/fi";
+import { SiLeetcode } from "react-icons/si";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
+  const socialLinks = [
+    {
+      name: "Email",
+      icon: <FiMail />,
+      href: "mailto:yranjana757@gmail.com",
+      label: "Send email"
+    },
+    {
+      name: "GitHub",
+      icon: <FiGithub />,
+      href: "https://github.com/Ranjana993",
+      label: "GitHub profile"
+    },
+    {
+      name: "LinkedIn",
+      icon: <FiLinkedin />,
+      href: "https://www.linkedin.com/in/ranjana-yadav-a157311a7/",
+      label: "LinkedIn profile"
+    },
+    {
+      name: "LeetCode",
+      icon: <SiLeetcode />,
+      href: "https://leetcode.com/u/Ranjana_Yadav/",
+      label: "LeetCode profile"
+    }
+  ];
+
   return (
-    <div className="relative overflow-hidden bg-white/5 py-24 text-center">
-      {/* Floating background elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Floating triangles */}
-        {[...Array(6)].map((_, i) => (
-          <motion.div
-            key={`triangle-${i}`}
-            className="absolute w-16 h-16 opacity-10"
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23ffffff' d='M50 15L85 85H15Z'/%3E%3C/svg%3E")`,
-              top: `${Math.random() * 80}%`,
-              left: `${Math.random() * 80}%`,
-            }}
-            animate={{
-              y: [0, -15, 0],
-              rotate: [0, 5, 0],
-            }}
-            transition={{
-              duration: 10 + Math.random() * 10,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          />
-        ))}
+    <footer className="relative border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
+      {/* Decorative gradient bar */}
+      <div className="h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-30"></div>
 
-        {/* Floating circles */}
-        {[...Array(8)].map((_, i) => (
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="flex flex-col items-center">
+          {/* Name and title */}
           <motion.div
-            key={`circle-${i}`}
-            className="absolute rounded-full bg-white/5"
-            style={{
-              width: `${20 + Math.random() * 30}px`,
-              height: `${20 + Math.random() * 30}px`,
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [0, 20, 0],
-              x: [0, 10, 0],
-            }}
-            transition={{
-              duration: 15 + Math.random() * 15,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          />
-        ))}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center mb-8"
+          >
+            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">
+              Ranjana Yadav
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400">
+              Full Stack Developer • AI Enthusiast
+            </p>
+          </motion.div>
 
-        {/* Floating squares */}
-        {[...Array(4)].map((_, i) => (
+          {/* Social links */}
           <motion.div
-            key={`square-${i}`}
-            className="absolute w-12 h-12 opacity-10"
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Crect fill='%23ffffff' width='100' height='100'/%3E%3C/svg%3E")`,
-              top: `${Math.random() * 80}%`,
-              left: `${Math.random() * 80}%`,
-            }}
-            animate={{
-              y: [0, 10, 0],
-              rotate: [0, 180, 360],
-            }}
-            transition={{
-              duration: 20 + Math.random() * 10,
-              repeat: Infinity,
-              ease: "linear",
-            }}
-          />
-        ))}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="flex items-center justify-center space-x-6 mb-8"
+          >
+            {socialLinks.map((link) => (
+              <motion.a
+                key={link.name}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={link.label}
+                className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <span className="text-xl">{link.icon}</span>
+              </motion.a>
+            ))}
+          </motion.div>
+
+          {/* Copyright and made with */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <div className="flex items-center justify-center mb-4 text-gray-600 dark:text-gray-400">
+              <FiCode className="mr-2" />
+              <span>Built with React & Tailwind CSS</span>
+            </div>
+
+            <p className="text-gray-500 dark:text-gray-500 text-sm flex items-center justify-center">
+              <span className="flex items-center mr-2">
+                <FiHeart className="mr-1 text-red-500" />
+                Made with passion
+              </span>
+              <span className="mx-2">•</span>
+              <span>© {currentYear} Ranjana Yadav</span>
+              <span className="mx-2">•</span>
+              <span>All rights reserved</span>
+            </p>
+          </motion.div>
+
+          {/* Back to top */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="mt-8"
+          >
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="text-sm text-gray-500 dark:text-gray-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center group"
+              aria-label="Back to top"
+            >
+              <svg
+                className="w-4 h-4 mr-1 group-hover:-translate-y-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+              </svg>
+              Back to top
+            </button>
+          </motion.div>
+        </div>
       </div>
 
-      {/* Content */}
-      <motion.p
-        className="relative z-10 text-xl font-medium"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-      >
-        Made with <span className="inline-block text-red-500 animate-heartbeat">💓</span> by Ranjana Yadav
-      </motion.p>
+      {/* Bottom gradient bar */}
+      <div className="h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-700 to-transparent opacity-30"></div>
+    </footer>
+  );
+};
 
-      {/* Animated border */}
-      <motion.div
-        className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"
-        initial={{ scaleX: 0 }}
-        whileInView={{ scaleX: 1 }}
-        transition={{ duration: 1, ease: "circOut" }}
-        viewport={{ once: true }}
-      />
-    </div>
-  )
-}
-
-export default Footer
+export default Footer;
