@@ -20,7 +20,7 @@ function JsProjects() {
       id: 2,
       title: "Car Racing Game",
       description: "Interactive car racing game built with HTML, CSS, and JavaScript for an engaging gaming experience.",
-      image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://plus.unsplash.com/premium_photo-1664304747572-1e9730f17cc4?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       technologies: ["HTML5", "CSS3", "JavaScript", "Canvas API", "Game Development"],
       features: ["Real-time gameplay", "Score tracking", "Responsive controls", "Visual effects"],
       githubLink: "https://github.com/Ranjana993/Car-Racing",
