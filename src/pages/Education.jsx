@@ -67,9 +67,9 @@ function Education() {
 
   const getLevelColor = (level) => {
     switch (level) {
-      case 'Advanced': return 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400';
-      case 'Intermediate': return 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400';
-      default: return 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300';
+      case 'Advanced': return 'bg-green-900/30 text-green-400';
+      case 'Intermediate': return 'bg-blue-900/30 text-blue-400';
+      default: return 'bg-gray-700 text-gray-300';
     }
   };
 
@@ -82,10 +82,10 @@ function Education() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Academic & Technical Foundation
           </h1>
-          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-gray-300 max-w-2xl mx-auto">
             Building a strong foundation in computer science principles while specializing in modern web development and AI integration
           </p>
         </motion.div>
@@ -94,7 +94,7 @@ function Education() {
           {educationData.map((edu, index) => (
             <motion.div
               key={edu.id}>
-              <div className="h-full bg-white dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-700 p-6 hover:border-blue-300 dark:hover:border-blue-700 transition-all duration-300">
+              <div className="h-full bg-gray-800/50 rounded-xl border border-gray-700 p-6 hover:border-blue-700 transition-all duration-300">
 
                 {/* Header */}
                 <div className="mb-6">
@@ -103,29 +103,29 @@ function Education() {
                       <Link
                         to={edu.link}
                         target="_blank"
-                        className="text-xl font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center"
+                        className="text-xl font-bold text-white hover:text-blue-400 transition-colors flex items-center"
                       >
                         {edu.title} <FiExternalLink className="ml-2 text-sm" />
                       </Link>
-                      <div className="flex items-center text-sm text-gray-600 dark:text-gray-400 mt-2">
+                      <div className="flex items-center text-sm text-gray-400 mt-2">
                         <FiBook className="mr-2" />
                         <span>{edu.degree}</span>
                       </div>
                     </div>
                     <div className="text-right">
-                      <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                      <div className="text-2xl font-bold text-blue-400">
                         {edu.percentage}
                       </div>
-                      <div className="text-xs text-gray-500 dark:text-gray-500">CGPA</div>
+                      <div className="text-xs text-gray-500">CGPA</div>
                     </div>
                   </div>
 
                   <div className="flex items-center justify-between text-sm">
-                    <div className="flex items-center text-gray-500 dark:text-gray-500">
+                    <div className="flex items-center text-gray-500">
                       <FiCalendar className="mr-2" />
                       <span>{edu.duration}</span>
                     </div>
-                    <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-xs">
+                    <span className="px-2 py-1 bg-gray-700 rounded text-xs">
                       {edu.location}
                     </span>
                   </div>
@@ -133,7 +133,7 @@ function Education() {
 
                 {/* Tech Focus */}
                 <div className="mb-6">
-                  <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3 flex items-center">
+                  <h3 className="text-sm font-semibold text-gray-300 mb-3 flex items-center">
                     <FiCpu className="mr-2" />
                     Technical Focus Areas
                   </h3>
@@ -141,10 +141,10 @@ function Education() {
                     {edu.techFocus.map((tech, i) => (
                       <div
                         key={i}
-                        className="flex items-center p-2 bg-gray-50 dark:bg-gray-700/50 rounded-lg"
+                        className="flex items-center p-2 bg-gray-700/50 rounded-lg"
                       >
-                        <div className={`p-1.5 rounded-md mr-2 ${index === 0 ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400' :
-                            'bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400'
+                        <div className={`p-1.5 rounded-md mr-2 ${index === 0 ? 'bg-blue-900/30 text-blue-400' :
+                            'bg-purple-900/30 text-purple-400'
                           }`}>
                           {tech.icon}
                         </div>
@@ -161,15 +161,15 @@ function Education() {
 
                 {/* Projects */}
                 <div className="mb-6">
-                  <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3 flex items-center">
+                  <h3 className="text-sm font-semibold text-gray-300 mb-3 flex items-center">
                     <FiGitBranch className="mr-2" />
                     Key Projects
                   </h3>
                   <div className="space-y-2">
                     {edu.projects.map((project, i) => (
-                      <div key={i} className="flex justify-between items-center p-2 bg-gray-50 dark:bg-gray-700/50 rounded">
-                        <span className="text-sm text-gray-800 dark:text-gray-200">{project.name}</span>
-                        <span className="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">
+                      <div key={i} className="flex justify-between items-center p-2 bg-gray-700/50 rounded">
+                        <span className="text-sm text-gray-200">{project.name}</span>
+                        <span className="text-xs px-2 py-1 bg-gray-700 rounded">
                           {project.tech}
                         </span>
                       </div>
@@ -179,12 +179,12 @@ function Education() {
 
                 {/* Achievements */}
                 <div>
-                  <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">
+                  <h3 className="text-sm font-semiboldtext-gray-300 mb-3">
                     Technical Achievements
                   </h3>
                   <ul className="space-y-2">
                     {edu.achievements.map((achievement, i) => (
-                      <li key={i} className="flex items-start text-sm text-gray-600 dark:text-gray-400">
+                      <li key={i} className="flex items-start text-sm ext-gray-400">
                         <span className={`inline-block w-1.5 h-1.5 mt-1.5 mr-2 rounded-full ${index === 0 ? 'bg-blue-500' : 'bg-purple-500'
                           }`}></span>
                         {achievement}

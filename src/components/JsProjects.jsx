@@ -14,7 +14,7 @@ function JsProjects() {
       githubLink: "https://github.com/Ranjana993/full-fledge-site",
       liveDemoLink: "https://my-project-ranjana993.vercel.app/",
       category: "Frontend",
-      icon: <FiGlobe className="text-blue-600 dark:text-blue-400" />
+      icon: <FiGlobe className="text-blue-400" />
     },
     {
       id: 2,
@@ -26,7 +26,7 @@ function JsProjects() {
       githubLink: "https://github.com/Ranjana993/Car-Racing",
       liveDemoLink: "https://car-racing-eight.vercel.app/",
       category: "Game Development",
-      icon: <SiGamejolt className="text-red-600 dark:text-red-400" />
+      icon: <SiGamejolt className="text-red-400" />
     },
     {
       id: 3,
@@ -38,7 +38,7 @@ function JsProjects() {
       githubLink: "https://github.com/Ranjana993/cocktail",
       liveDemoLink: "https://cocktail-app-lime.vercel.app/",
       category: "Web App",
-      icon: <FiShoppingBag className="text-amber-600 dark:text-amber-400" />
+      icon: <FiShoppingBag className="text-amber-400" />
     },
     {
       id: 4,
@@ -50,7 +50,7 @@ function JsProjects() {
       githubLink: "https://github.com/Ranjana993/traveling-site",
       liveDemoLink: "https://traveling-site-three.vercel.app/",
       category: "Travel",
-      icon: <FiMap className="text-green-600 dark:text-green-400" />
+      icon: <FiMap className="text-green-400" />
     },
     {
       id: 5,
@@ -62,7 +62,7 @@ function JsProjects() {
       githubLink: "https://github.com/Ranjana993/food-hunter",
       liveDemoLink: "https://food-hunter-seven.vercel.app/",
       category: "E-commerce",
-      icon: <FiShoppingBag className="text-orange-600 dark:text-orange-400" />
+      icon: <FiShoppingBag className="text-orange-400" />
     },
     {
       id: 6,
@@ -74,7 +74,7 @@ function JsProjects() {
       githubLink: "https://github.com/Ranjana993/tic-tac-toe",
       liveDemoLink: "https://tic-tac-toe-six-kohl.vercel.app/",
       category: "Game",
-      icon: <SiGamejolt className="text-purple-600 dark:text-purple-400" />
+      icon: <SiGamejolt className="text-purple-400" />
     }
   ];
 
@@ -84,7 +84,7 @@ function JsProjects() {
         <motion.div
           key={project.id}
         >
-          <div className="h-full bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-xl transition-all duration-300 hover:border-purple-300 dark:hover:border-purple-600">
+          <div className="h-full bg-gray-800 rounded-xl border border-gray-700 overflow-hidden hover:shadow-xl transition-all duration-300 hover:border-purple-600">
 
             {/* Project Image */}
             <div className="relative overflow-hidden h-48">
@@ -95,7 +95,7 @@ function JsProjects() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
               <div className="absolute top-4 left-4">
-                <div className="bg-white/90 dark:bg-gray-900/90 p-2 rounded-lg">
+                <div className="bg-gray-900/90 p-2 rounded-lg">
                   {project.icon}
                 </div>
               </div>
@@ -110,10 +110,10 @@ function JsProjects() {
             <div className="p-5">
               {/* Title and Description */}
               <div className="mb-4">
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 line-clamp-1">
+                <h3 className="text-lg font-bold text-white mb-2 line-clamp-1">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm line-clamp-2">
+                <p className="text-gray-400 text-sm line-clamp-2">
                   {project.description}
                 </p>
               </div>
@@ -124,7 +124,7 @@ function JsProjects() {
                   {project.technologies.map((tech, idx) => (
                     <span
                       key={idx}
-                      className="px-2.5 py-1 bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300 rounded text-xs font-medium"
+                      className="px-2.5 py-1 bg-purple-900/20 text-purple-300 rounded text-xs font-medium"
                     >
                       {tech}
                     </span>
@@ -134,12 +134,12 @@ function JsProjects() {
 
               {/* Features */}
               <div className="mb-4">
-                <h4 className="text-xs font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                <h4 className="text-xs font-semibold text-gray-300 mb-2">
                   Features
                 </h4>
                 <ul className="space-y-1">
                   {project.features.slice(0, 2).map((feature, idx) => (
-                    <li key={idx} className="text-xs text-gray-600 dark:text-gray-400 flex items-start">
+                    <li key={idx} className="text-xs text-gray-400 flex items-start">
                       <span className="w-1 h-1 bg-purple-500 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
                       <span className="line-clamp-1">{feature}</span>
                     </li>
@@ -148,13 +148,13 @@ function JsProjects() {
               </div>
 
               {/* Action Buttons */}
-              <div className="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-700">
+              <div className="flex items-center justify-between pt-4 border-t border-gray-700">
                 <div className="flex space-x-2">
                   <a
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors text-sm"
+                    className="flex items-center px-3 py-1.5 bg-gray-700 text-gray-300 rounded-lg hover:bg-gray-600 transition-colors text-sm"
                     aria-label="View code on GitHub"
                   >
                     <FiGithub className="mr-1.5" size={14} />
@@ -171,7 +171,7 @@ function JsProjects() {
                     Demo
                   </a>
                 </div>
-                <div className="text-xs text-gray-400 dark:text-gray-500">
+                <div className="text-xs text-gray-500">
                   #{String(index + 1).padStart(2, '0')}
                 </div>
               </div>

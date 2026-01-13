@@ -98,10 +98,10 @@ export default function ContactUs() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">
             Get In Touch
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-300 max-w-2xl mx-auto text-lg">
             Interested in collaboration, have questions about my work, or want to discuss opportunities?
           </p>
         </motion.div>
@@ -115,33 +115,33 @@ export default function ContactUs() {
             viewport={{ once: true }}
             className="order-2 lg:order-1"
           >
-            <div className="bg-white dark:bg-gray-800/50 rounded-2xl border border-gray-200 dark:border-gray-700 p-8">
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-8">
+            <div className="bg-gray-800/50 rounded-2xl border border-gray-700 p-8">
+              <h3 className="text-2xl font-semibold text-white mb-8">
                 Contact Information
               </h3>
 
               <div className="space-y-6 mb-10">
                 {/* Location */}
                 <div className="flex items-center">
-                  <div className="flex-shrink-0 w-12 h-12 bg-blue-50 dark:bg-blue-900/20 rounded-lg flex items-center justify-center mr-4">
-                    <FiMapPin className="text-blue-600 dark:text-blue-400 text-xl" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-blue-900/20 rounded-lg flex items-center justify-center mr-4">
+                    <FiMapPin className="text-blue-400 text-xl" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400 mb-1">Location</p>
-                    <p className="font-medium text-gray-900 dark:text-white">Delhi, India</p>
+                    <p className="text-sm text-gray-400 mb-1">Location</p>
+                    <p className="font-medium text-white">Delhi, India</p>
                   </div>
                 </div>
 
                 {/* Email */}
                 <div className="flex items-center">
-                  <div className="flex-shrink-0 w-12 h-12 bg-green-50 dark:bg-green-900/20 rounded-lg flex items-center justify-center mr-4">
-                    <SiGmail className="text-green-600 dark:text-green-400 text-xl" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-green-900/20 rounded-lg flex items-center justify-center mr-4">
+                    <SiGmail className="text-green-400 text-xl" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400 mb-1">Email</p>
+                    <p className="text-sm text-gray-400 mb-1">Email</p>
                     <a
                       href="mailto:yranjana757@gmail.com"
-                      className="font-medium text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center group"
+                      className="font-medium text-white hover:text-blue-400 transition-colors flex items-center group"
                     >
                       yranjana757@gmail.com
                       <FiExternalLink className="ml-2 text-sm opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -152,7 +152,7 @@ export default function ContactUs() {
 
               {/* Social Links */}
               <div>
-                <h4 className="text-lg font-medium text-gray-900 dark:text-white mb-6">
+                <h4 className="text-lg font-medium text-white mb-6">
                   Connect with me
                 </h4>
                 <div className="grid grid-cols-2 gap-4">
@@ -162,17 +162,17 @@ export default function ContactUs() {
                       href={info.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex items-center p-4 border border-gray-200 dark:border-gray-700 rounded-xl hover:border-blue-300 dark:hover:border-blue-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300"
+                      className="group flex items-center p-4 border border-gray-700 rounded-xl hover:border-blue-600 hover:bg-gray-800 transition-all duration-300"
                     >
-                      <div className="flex-shrink-0 w-10 h-10 bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
-                        <div className="text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                      <div className="flex-shrink-0 w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
+                        <div className="text-gray-300 group-hover:text-blue-400">
                           {info.icon}
                         </div>
                       </div>
                       <div className="flex-1 min-w-0">
-                        <p className="text-sm text-gray-500 dark:text-gray-400 truncate">{info.label}</p>
+                        <p className="text-sm text-gray-400 truncate">{info.label}</p>
                         <div className="flex items-center">
-                          <p className="font-medium text-gray-900 dark:text-white text-sm truncate">
+                          <p className="font-medium text-white text-sm truncate">
                             {info.displayText}
                           </p>
                           <FiExternalLink className="ml-2 text-xs opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
@@ -184,13 +184,13 @@ export default function ContactUs() {
               </div>
 
               {/* Availability */}
-              <div className="mt-10 pt-8 border-t border-gray-200 dark:border-gray-700">
-                <h4 className="text-lg font-medium text-gray-900 dark:text-white mb-3">
+              <div className="mt-10 pt-8 border-t border-gray-700">
+                <h4 className="text-lg font-medium text-white mb-3">
                   Availability
                 </h4>
                 <div className="flex items-center">
                   <div className="w-3 h-3 bg-green-500 rounded-full mr-3 animate-pulse"></div>
-                  <p className="text-gray-600 dark:text-gray-300">
+                  <p className="text-gray-300">
                     Available for freelance opportunities and full-time roles
                   </p>
                 </div>
@@ -207,14 +207,14 @@ export default function ContactUs() {
             viewport={{ once: true }}
             className="order-1 lg:order-2"
           >
-            <div className="bg-white dark:bg-gray-800/50 rounded-2xl border border-gray-200 dark:border-gray-700 p-8">
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-8">
+            <div className="bg-gray-800/50 rounded-2xl border border-gray-700 p-8">
+              <h3 className="text-2xl font-semibold text-white mb-8">
                 Send a Message
               </h3>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <motion.div variants={itemVariants}>
-                  <label htmlFor="fullName" className="block mb-2.5 text-sm font-medium text-gray-700 dark:text-gray-300">
+                  <label htmlFor="fullName" className="block mb-2.5 text-sm font-medium text-gray-300">
                     Full Name *
                   </label>
                   <div className="relative">
@@ -227,7 +227,7 @@ export default function ContactUs() {
                       name="fullName"
                       value={formData.fullName}
                       onChange={handleChange}
-                      className="pl-10 w-full px-4 py-2 text-gray-900 dark:text-white bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:focus:ring-blue-500 dark:focus:border-blue-500 transition-all duration-200"
+                      className="pl-10 w-full px-4 py-2 text-white bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
                       placeholder="John Doe"
                       required
                     />
@@ -235,7 +235,7 @@ export default function ContactUs() {
                 </motion.div>
 
                 <motion.div variants={itemVariants}>
-                  <label htmlFor="email" className="block mb-2.5 text-sm font-medium text-gray-700 dark:text-gray-300">
+                  <label htmlFor="email" className="block mb-2.5 text-sm font-medium text-gray-300">
                     Email Address *
                   </label>
                   <div className="relative">
@@ -248,7 +248,7 @@ export default function ContactUs() {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className="pl-10 w-full px-4 py-2 text-gray-900 dark:text-white bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:focus:ring-blue-500 dark:focus:border-blue-500 transition-all duration-200"
+                      className="pl-10 w-full px-4 py-2 text-gray-900 bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:border-blue-500 transition-all duration-200"
                       placeholder="john@example.com"
                       required
                     />
@@ -256,7 +256,7 @@ export default function ContactUs() {
                 </motion.div>
 
                 <motion.div variants={itemVariants}>
-                  <label htmlFor="message" className="block mb-2.5 text-sm font-medium text-gray-700 dark:text-gray-300">
+                  <label htmlFor="message" className="block mb-2.5 text-sm font-medium text-gray-300">
                     Message *
                   </label>
                   <div className="relative">
@@ -269,7 +269,7 @@ export default function ContactUs() {
                       value={formData.message}
                       onChange={handleChange}
                       rows={5}
-                      className="pl-10 w-full px-4 py-1 text-gray-900 dark:text-white bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:focus:ring-blue-500 dark:focus:border-blue-500 transition-all duration-200 resize-none"
+                      className="pl-10 w-full px-4 py-1 text-white bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 resize-none"
                       placeholder="Tell me about your project or opportunity..."
                       required
                     />
@@ -280,7 +280,7 @@ export default function ContactUs() {
                   <motion.button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700 text-white font-medium rounded-lg transition-all duration-300 flex items-center justify-center"
+                    className="w-full px-4 py-3  hover:bg-blue-700 text-white font-medium rounded-lg transition-all duration-300 flex items-center justify-center"
                     whileHover={{ scale: 1.01 }}
                     whileTap={{ scale: 0.99 }}
                   >
@@ -314,19 +314,19 @@ export default function ContactUs() {
           viewport={{ once: true }}
           className="mt-12 max-w-3xl mx-auto"
         >
-          <div className="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/10 rounded-xl p-6 border border-blue-200 dark:border-blue-800">
+          <div className="bg-gradient-to-r from-blue-900/20 to-blue-800/10 rounded-xl p-6 border border-blue-800">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center">
-                <div className="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-2">24h</div>
-                <div className="text-sm text-gray-600 dark:text-gray-300">Response Time</div>
+                <div className="text-2xl font-semibold text-blue-400 mb-2">24h</div>
+                <div className="text-sm text-gray-300">Response Time</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-semibold text-green-600 dark:text-green-400 mb-2">100%</div>
-                <div className="text-sm text-gray-600 dark:text-gray-300">Response Rate</div>
+                <div className="text-2xl font-semibold text-green-400 mb-2">100%</div>
+                <div className="text-sm text-gray-300">Response Rate</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-semibold text-purple-600 dark:text-purple-400 mb-2">Open</div>
-                <div className="text-sm text-gray-600 dark:text-gray-300">To Opportunities</div>
+                <div className="text-2xl font-semibold text-purple-400 mb-2">Open</div>
+                <div className="text-sm text-gray-300">To Opportunities</div>
               </div>
             </div>
           </div>

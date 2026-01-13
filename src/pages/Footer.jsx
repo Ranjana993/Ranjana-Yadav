@@ -33,7 +33,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
+    <footer className="relative border-t border-gray-800 bg-gray-900">
       {/* Decorative gradient bar */}
       <div className="h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-30"></div>
 
@@ -47,10 +47,10 @@ const Footer = () => {
             viewport={{ once: true }}
             className="text-center mb-8"
           >
-            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">
+            <h3 className="text-2xl font-semibold text-white mb-2">
               Ranjana Yadav
             </h3>
-            <p className="text-gray-600 dark:text-gray-400">
+            <p className="text-gray-400">
               Full Stack Developer • AI Enthusiast
             </p>
           </motion.div>
@@ -70,7 +70,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={link.label}
-                className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
+                className="text-gray-400 hover:text-blue-400 transition-colors p-2 rounded-lg hover:bg-gray-800"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -87,12 +87,12 @@ const Footer = () => {
             viewport={{ once: true }}
             className="text-center"
           >
-            <div className="flex items-center justify-center mb-4 text-gray-600 dark:text-gray-400">
+            <div className="flex items-center justify-center mb-4 text-gray-400">
               <FiCode className="mr-2" />
               <span>Built with React & Tailwind CSS</span>
             </div>
 
-            <p className="text-gray-500 dark:text-gray-500 text-sm flex items-center justify-center">
+            <p className="text-gray-500 text-sm flex items-center justify-center">
               <span className="flex items-center mr-2">
                 <FiHeart className="mr-1 text-red-500" />
                 Made with passion
@@ -114,7 +114,7 @@ const Footer = () => {
           >
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="text-sm text-gray-500 dark:text-gray-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center group"
+              className="text-sm text-gray-500 hover:text-blue-400 transition-colors flex items-center group"
               aria-label="Back to top"
             >
               <svg
@@ -132,7 +132,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom gradient bar */}
-      <div className="h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-700 to-transparent opacity-30"></div>
+      <div className="h-px bg-gradient-to-r from-transparent :via-gray-700 to-transparent opacity-30"></div>
     </footer>
   );
 };

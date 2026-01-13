@@ -24,7 +24,7 @@ function ReactProjects() {
       githubLink: "https://github.com/Ranjana993/video-hub",
       liveDemoLink: "https://video-hub-sage.vercel.app/",
       category: "React Full-Stack",
-      icon: <FiVideo className="text-blue-600 dark:text-blue-400" />
+      icon: <FiVideo className="text-blue-400" />
     },
     {
       id: 'footFly',
@@ -44,7 +44,7 @@ function ReactProjects() {
       githubLink: "https://github.com/Ranjana993/soleSphere",
       liveDemoLink: "https://sole-sphere-frontend.vercel.app/",
       category: "MERN Stack",
-      icon: <FiShoppingBag className="text-purple-600 dark:text-purple-400" />
+      icon: <FiShoppingBag className="text-purple-400" />
     }
   ];
 
@@ -58,7 +58,7 @@ function ReactProjects() {
         <motion.div
           key={project.id}
         >
-          <div className="h-full bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-2xl transition-all duration-300">
+          <div className="h-full bg-gray-800 rounded-2xl border border-gray-700 overflow-hidden hover:shadow-2xl transition-all duration-300">
 
             {/* Project Image */}
             <div className="relative overflow-hidden h-56">
@@ -70,7 +70,7 @@ function ReactProjects() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
               <div className="absolute top-4 left-4">
                 <div className="flex items-center space-x-2">
-                  <div className="bg-white/90 dark:bg-gray-900/90 p-2 rounded-lg">
+                  <div className="bg-gray-900/90 p-2 rounded-lg">
                     {project.icon}
                   </div>
                   <span className="bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
@@ -85,18 +85,18 @@ function ReactProjects() {
               {/* Title and Description */}
               <div className="mb-4">
                 <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                  <h3 className="text-xl font-bold text-white">
                     {project.title}
                   </h3>
                   <button
                     onClick={() => toggleProject(project.id)}
-                    className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                    className="text-gray-400 hover:text-gray-300 transition-colors"
                     aria-label={expandedProject === project.id ? "Collapse details" : "Expand details"}
                   >
                     {expandedProject === project.id ? <FiChevronUp size={20} /> : <FiChevronDown size={20} />}
                   </button>
                 </div>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">
+                <p className="text-gray-400 text-sm">
                   {project.description}
                 </p>
               </div>
@@ -107,7 +107,7 @@ function ReactProjects() {
                   {project.technologies.map((tech, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-xs font-medium"
+                      className="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium"
                     >
                       {tech}
                     </span>
@@ -125,19 +125,19 @@ function ReactProjects() {
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
-                      <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">
+                    <div className="pt-4 border-t border-gray-700">
+                      <h4 className="text-sm font-semibold text-gray-300 mb-3">
                         Key Features
                       </h4>
                       <ul className="space-y-2 mb-4">
                         {project.features.map((feature, index) => (
-                          <li key={index} className="flex items-start text-sm text-gray-600 dark:text-gray-400">
+                          <li key={index} className="flex items-start text-sm text-gray-400">
                             <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-1.5 mr-3 flex-shrink-0"></span>
                             {feature}
                           </li>
                         ))}
                       </ul>
-                      <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                      <p className="text-sm text-gray-400 mb-4">
                         {project.fullDescription}
                       </p>
                     </div>
@@ -146,13 +146,13 @@ function ReactProjects() {
               </AnimatePresence>
 
               {/* Action Buttons */}
-              <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
+              <div className="flex items-center justify-between pt-4 border-t border-gray-700">
                 <div className="flex space-x-3">
                   <a
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                    className="flex items-center px-4 py-2 bg-gray-700 text-gray-300 rounded-lg hover:bg-gray-600 transition-colors"
                   >
                     <FiGithub className="mr-2" />
                     <span className="text-sm font-medium">Code</span>
@@ -167,7 +167,7 @@ function ReactProjects() {
                     <span className="text-sm font-medium">Live Demo</span>
                   </a>
                 </div>
-                <div className="text-xs text-gray-400 dark:text-gray-500">
+                <div className="text-xs text-gray-500">
                   #{project.id === 'videoHub' ? '01' : '02'}
                 </div>
               </div>

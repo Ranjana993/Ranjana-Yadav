@@ -8,7 +8,7 @@ export default function Skills() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent"
+        className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-16 bg-gradient-to-r   from-blue-400 to-purple-400 bg-clip-text text-transparent"
       >
         My Skills
       </motion.h1>
@@ -21,7 +21,7 @@ export default function Skills() {
               bg-white borderBlack rounded-xl px-3 py-3 
               bg-white/10 hover:text-white hover:bg-white/20 transition-all duration-300
               ${typeof skill === 'string' && (skill.includes("AI") || skill.includes("RAG") || skill.includes("LLM") || skill.includes("Gemini") || skill.includes("OpenAI"))
-                ? "border-2 border-orange-500/30 dark:border-orange-500/50 bg-gradient-to-r from-orange-500/10 to-red-500/10"
+                ? "border-2  border-orange-500/50 bg-gradient-to-r from-orange-500/10 to-red-500/10"
                 : ""
               }
             `}
