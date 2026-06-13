@@ -65,12 +65,12 @@ function About() {
           <Cursor cursorColor='red' />
         </span>
         <p className='px-[10px] text-1xl md:px-[50px] lg:px-[40px] xl:w-[900px] sm:m-[0px] md:mt-[10px] md:tracking-wider font-serif text-gray-300'>
-          🚀  I build intelligent web applications with the MERN stack, specializing in AI integration—LLMs, RAG, and real-time systems. 3+ years of full-stack experience focused on making software not just functional, but perceptive.
+          🚀 I build intelligent web applications with the MERN stack, specializing in AI integration—LLMs, RAG, and real-time systems. 2+ years of full-stack experience focused on making software not just functional, but perceptive.
         </p>
         <div className='flex flex-col items-center md:flex-row md:gap-[70px] py-12 '>
           <div className='mt-[10px]'>
             <a
-              href='https://drive.google.com/file/d/1dGyrH2sICYufBpdA5LPhuevA88ojfThk/view?usp=sharing'
+              href='https://drive.google.com/file/d/1H0pP9TO2Kkeuc5uvTdergzLrr87V9--M/view?usp=sharing'
               target='_blank'
               download='Ranjana_Resume.pdf'
             >

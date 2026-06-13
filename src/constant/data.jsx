@@ -3,7 +3,38 @@ import { FaReact } from "react-icons/fa";
 import { SiNextdotjs } from "react-icons/si";
 
 export const experiencesData = [
-  
+  {
+    title: "Full Stack Engineer",
+    location: "Actowiz Solutions · Ahmedabad, Gujarat, India · On-site",
+    description:
+      "Working as a Full Stack Engineer on-site in Ahmedabad. Building robust applications, implementing scalable solutions, and collaborating with cross-functional teams to deliver high-quality software products.",
+    icon: React.createElement(SiNextdotjs),
+    date: "Feb 2026 - Present",
+  },
+  {
+    title: "Software Developer",
+    location: "nexaBridge.ai · Remote",
+    description:
+      "Developed interactive analytics dashboards with dynamic graphs and pie charts for enhanced data visibility. Refactored legacy React codebase, improving performance by 25%. Built wallet and grocery management systems with Node.js backend, including receipt management using webhook APIs. Collaborated with core management team on product planning and implemented security fixes across the application.",
+    icon: React.createElement(FaReact),
+    date: "Apr 2025 - Sep 2025",
+  },
+  {
+    title: "Full Stack Engineer",
+    location: "Curious Ecosystem · Bengaluru, Karnataka, India · Remote",
+    description:
+      "Contributed significantly to a closed-source project, leading frontend development efforts. Utilized expertise to implement and optimize features using GraphQL and modern software development practices, fostering collaboration and innovation within the team.",
+    icon: React.createElement(SiNextdotjs),
+    date: "Aug 2023 - Aug 2025",
+  },
+  {
+    title: "React Developer",
+    location: "Nucleya Technologies · Remote · Internship",
+    description:
+      "Developed and managed dashboards using Material UI and React.js. Worked on three web applications targeting customers, social media, and admin users; built RESTful APIs with functionalities including login/signup with full authentication.",
+    icon: React.createElement(FaReact),
+    date: "Aug 2023 - Dec 2023",
+  },
   {
     title: "Freelance Full-Stack Developer",
     location: "Self-Employed",
@@ -11,30 +42,6 @@ export const experiencesData = [
       "Currently freelancing with a focus on creating robust, user-friendly applications. Adept at translating ideas into functional and aesthetically pleasing digital experiences.",
     icon: React.createElement(SiNextdotjs),
     date: "2023 - present",
-  },
-  {
-    title: "Full Stack Developer Intern",
-    location: "Curious Business Private Limited",
-    description:
-      "Contributed significantly to a closed-source project, leading frontend development efforts. Utilized my expertise to implement and optimize features, fostering collaboration and innovation within the team.",
-    icon: React.createElement(SiNextdotjs),
-    date: "July 2023 - August 2025",
-  },
-  {
-    title: "Full Stack Developer",
-    location: "Nexa Bridge",
-    description:
-      "Developed interactive analytics dashboards with dynamic graphs and pie charts for enhanced data visibility. Refactored legacy React codebase, improving performance by 25%. Built wallet and grocery management systems with Node.js backend, including receipt management using webhook APIs. Collaborated with core management team on product planning and implemented security fixes across the application.",
-    icon: React.createElement(FaReact),
-    date: "April 2025 – September 2025",
-  },
-  {
-    title: "Full Stack Developer Intern",
-    location: "Nucleya Technology Pvt. Ltd.",
-    description:
-      "Developed and managed the dashboard Using materialUI and reactjs. Worked on three web applications targeting customers, social media, and admin users; built RESTful APIs with functionalities such as login/ sign up with full authentication.",
-    icon: React.createElement(FaReact),
-    date: "July 2023 - Dec 2023",
   },
   {
     title: "React Developer Intern",
